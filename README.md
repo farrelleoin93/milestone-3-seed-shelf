@@ -1,45 +1,217 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome farrelleoin93,
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+You can see the live website [here]().
 
-## Gitpod Reminders
+![Responsiveness]()
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+**To open any links in this document in a new tab press `CTRL + Click`.**
 
-`python3 -m http.server`
+# UX
+## Contents
 
-A blue button should appear to click: *Make Public*,
+---
 
-Another blue button should appear to click: *Open Browser*.
+- [UX](#ux)
+  - [User Stories](#user-stories)
+  - [Site Owner Goals](#goals)
+  - [User Requirements and Expectations](#user-requirements)
+  - [Design Choices](#design-choices)
+    - Fonts
+    - Icons
+    - Colours
+- [Wireframes](#wireframes)
+- [Features](#features)
+- [Technologies](#technologies)
+- [Testing](#testing)
+- [Bugs](#bugs)
+- [Deployment](#deployment)
+- [Credits](#credits)
+- [Acknowledgements](#acknowledgements)
+- [Contact](#contact)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+## <a name="ux">UX</a>
 
-A blue button should appear to click: *Make Public*,
+---
 
-Another blue button should appear to click: *Open Browser*.
+### <a name="user-stories">User Stories</a>
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+1.
 
-## Updates Since The Instructional Video
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### <a name="goals">Site Owner Goals</a>
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+1. 
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+## <a name="user-requirements">User Requirements and Expectations</a>
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+---
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+### Requirements
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+- The user should be presented with a visually appealing website.
+- The user should be able to clearly navigate through the website even on their first visit.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+- The user should be able to contact the owner of the website.
 
---------
 
-Happy coding!
+### Expectations
+
+
+
+## <a name="design-choices">Design Choices</a>
+
+---
+
+### Fonts
+
+
+
+### Colours
+
+
+### Icons
+- The icons that I used in this project were provided by [Font Awesome](https://fontawesome.com/). I decided to use icons as they offer a pleasant visual aide to the site, 
+also users tend to know that icons usually work as buttons.
+
+## <a name="wireframes">Wireframes</a>
+
+---
+
+### Original Wireframes
+The original wireframes from before I started building this website can be found at the following links:
+
+
+### Actual Wireframes
+The wireframes for the actual website can be found at the following links:
+
+#### Changes to Original Wireframes
+
+
+## <a name="features">Features</a>
+
+---
+The main features of this website are:
+- an attractive design.
+- a navigation bar that the user understands how to use even on their first visit to the website 
+and that brings them to the appropriate part of the website.
+- a working contact us form so that the users can ask questions and give feedback about the website.
+- links to social network platforms.
+
+Features that will be added in the future are:
+- 
+
+
+
+## <a name="technologies">Technologies</a>
+
+---
+
+### Languages
+
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/CSS3)
+- [JavaScript](https://en.wikipedia.org/wiki/javascript)
+
+### Other
+
+1. [Tiny PNG](https://tinypng.com/)
+   - This was used to compress the size of every image used on in this project.
+2. [Font Awesome](https://fontawesome.com/)
+   - The icons used were found at Font Awesome.
+3. [Ucraft](https://www.ucraft.com/free-logo-maker)
+   - Ucraft was used to make the logo for the favicon.
+4. [Bootstrap 4.5](https://getbootstrap.com/)
+   - Bootstrap was used throughout this website, in 
+   particular for the navbar, form and for the responsiveness and styling.
+5. [jQuery](https://jquery.com/)
+   - jQuery was used through this website for interactive features.
+6. [Google Fonts](https://fonts.google.com/)
+   - The fonts used for this websites were found at Google Fonts.
+7. [Balsamiq](https://balsamiq.com/)
+   - The wireframes were made using Balsamiq.
+8. [Github](https://github.com/)
+   - This project was stored on Github.
+9. [Gitpod](https://www.gitpod.io/)
+   - Gitpod was used to write the code used for this website.
+10. [Git](https://en.wikipedia.org/wiki/Git)
+    - The version control system used for this project was Git.
+11. [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools)
+    - Chrome DevTools was used to test out code before adding it to this website.
+12. [WebFormatter](https://webformatter.com/html) 
+    - WebFormatter was used to format the html code.
+13. [Google Maps API](https://developers.google.com/maps/documentation/javascript/overview)
+    - The Google Maps API was used for the map.
+14. [Am I Responsive](http://ami.responsivedesign.is/) 
+    - Am I Responsive was used to see how the website looked on different devices.
+16. [Unsplash](https://unsplash.com/)
+    - Unsplash was used to get images to use for the website.
+17. [Emailjs](https://www.emailjs.com/)
+    - Emailjs was used to send the information added into the form to the owner of the website.
+18. [JSHint](https://jshint.com/)
+    - JSHint was used to test the JavaScript code.
+
+
+### Resources
+The following websites were used as learning resources throughout the building of this project:
+- [Code Institute](https://codeinstitute.net/)
+- [Slack - Code Institutes Community](https://slack.com/intl/en-ie/)
+- [w3schools](https://www.w3schools.com/)
+- [Stack Overflow](https://stackoverflow.com/)
+- [YouTube](https://www.youtube.com/)
+- [CSS-Tricks](https://css-tricks.com/)
+- [Markdown](https://commonmark.org/help/)
+
+## <a name="testing">Testing</a>
+
+---
+
+1. 
+
+#### Manual Testing 
+- 
+
+
+#### Testing User Stories
+
+1. 
+
+## <a name="bugs">Bugs</a>
+
+---
+
+### Bugs fixed while building the website:
+
+1. 
+
+## <a name="deployment">Deployment</a>
+
+---
+
+
+## <a name="credits">Credits</a>
+
+---
+
+### Credits for Fonts
+
+- [Google Fonts](https://fonts.google.com)
+- [Font Pair](https://fontpair.co/)
+
+### Media
+
+- 
+
+### Code 
+
+1. 
+### Content
+
+- 
+## <a name="acknowledgements">Acknowledgements</a>
+
+- I would like to thank mentor Akshat Garg for all his invaluable advice during my three mentor sessions.
+- 
+
+## <a name="contact">Contact</a>
+If you have any questions regarding this project feel free to contact me at farrelleoin93@gmail.com.
