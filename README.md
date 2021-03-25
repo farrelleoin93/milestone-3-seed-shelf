@@ -35,7 +35,8 @@ You can see the live website [here]().
 
 ### <a name="user-stories">User Stories</a>
 
-1.
+#### All Users
+1. 
 
 
 ### <a name="goals">Site Owner Goals</a>
