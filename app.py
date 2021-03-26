@@ -22,6 +22,12 @@ def get_seeds():
     return render_template("seeds.html", seeds=seeds)
 
 
+@app.route("/get_home")
+def get_home():
+    return render_template("index.html")
+
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
