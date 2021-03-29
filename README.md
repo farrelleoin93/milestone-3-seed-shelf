@@ -212,7 +212,8 @@ The following websites were used as learning resources throughout the building o
 ## <a name="acknowledgements">Acknowledgements</a>
 
 - I would like to thank mentor Akshat Garg for all his invaluable advice during my three mentor sessions.
-- I would also like to thank Tim, Michael and Fatima from code Institute tutors
+- I would also like to thank the turors at Code Institute, in particular Tim, Michael and Fatima 
+for their help during this project.
 
 ## <a name="contact">Contact</a>
 If you have any questions regarding this project feel free to contact me at farrelleoin93@gmail.com.
