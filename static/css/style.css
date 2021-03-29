@@ -5,3 +5,17 @@
 .flashed h4 {
     line-height: 2;
 }
+
+
+.hero {
+    height: 80vh;
+    width: 100%;
+    background-image: url(../images/hero.jpg);
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
