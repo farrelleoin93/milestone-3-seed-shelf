@@ -1,21 +1,30 @@
 {% extends "base.html" %}
 {% block content %}
     <div class="container">
-        <h3>Seeds</h3>
-    
-    
+        <h3 class="center-align">Seeds</h3>
+
         <div class="row">
-            <div class="col s12">
-                <div class="card small">
-                    {% for seed in seeds %}
+            {% for seed in seeds %}
+            <div class="col s4">
+                <div class="card small s4">
                     <p>{{ seed.seed_name }}</p>
                     <img class="seed-image" src="{{ seed.seed_image }}" alt="Seed Image">
-                    {% endfor %}
                 </div>
             </div>
+            <div class="col s4">
+                <div class="card small s4">
+                    <p>{{ seed.seed_name }}</p>
+                    <img class="seed-image" src="{{ seed.seed_image }}" alt="Seed Image">
+                </div>
+            </div>
+            <div class="col s4">
+                <div class="card small s4">
+                    <p>{{ seed.seed_name }}</p>
+                    <img class="seed-image" src="{{ seed.seed_image }}" alt="Seed Image">
+                </div>
+            </div>
+            {% endfor %}
         </div>
-    
-    </div>
-    
+    </div>    
 
 {% endblock %}
