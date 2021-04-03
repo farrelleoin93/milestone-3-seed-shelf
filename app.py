@@ -105,6 +105,29 @@ def logout():
     return redirect(url_for("login"))
 
 
+@app.route("/add_seed", methods=["GET", "POST"])
+def add_seed():
+    if request.method == "POST":
+        seed = {
+            "seed_name": request.form.get("seed_name"),
+            "category_name": request.form.get("category_name"),
+            "seed_description": request.form.get("seed_description"),
+            "seed_image": request.form.get("seed_image"),
+            "sowing_instructions": request.form.getlist("sowing_instructions"),
+            "growing_instructions": request.form.getlist(
+                "growing_instructions"),
+            "harvesting_instructions": request.form.getlist(
+                "harvesting_instructions"),
+            "created_by": session["user"]
+        }
+        mongo.db.seeds.insert_one(seed)
+        flash("Seed Successfully Added")
+        return redirect(url_for("seeds"))
+
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("add_seed.html", categories=categories)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

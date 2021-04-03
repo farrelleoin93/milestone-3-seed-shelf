@@ -1,8 +1,21 @@
 {% extends "base.html" %}
 {% block content %}
-
-    {% for seed in seeds %}
-        {{ seed.seed_name }}
-    {% endfor %}
+    <div class="container">
+        <h3>Seeds</h3>
+    
+    
+        <div class="row">
+            <div class="col s12">
+                <div class="card small">
+                    {% for seed in seeds %}
+                    <p>{{ seed.seed_name }}</p>
+                    <img class="seed-image" src="{{ seed.seed_image }}" alt="Seed Image">
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    
 
 {% endblock %}
