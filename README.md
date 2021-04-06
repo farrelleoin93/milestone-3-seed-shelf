@@ -183,7 +183,7 @@ The following websites were used as learning resources throughout the building o
 
 ### Bugs fixed while building the website:
 
-1. 
+1. cards displaying 3 times, change location of for loop
 
 ## <a name="deployment">Deployment</a>
 
@@ -208,7 +208,7 @@ The following websites were used as learning resources throughout the building o
 1. 
 ### Content
 
-- 
+- basil - https://www.healthline.com/nutrition/basil
 ## <a name="acknowledgements">Acknowledgements</a>
 
 - I would like to thank mentor Akshat Garg for all his invaluable advice during my three mentor sessions.

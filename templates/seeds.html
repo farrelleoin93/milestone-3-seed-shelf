@@ -6,10 +6,12 @@
         <div class="row">
             {% for seed in seeds %}
             <div class="col s4">
+                <a href="{{ url_for('get_seed', seed_id=seed._id) }}">
                 <div class="card small s4">
                     <p>{{ seed.seed_name }}</p>
                     <img class="seed-image" src="{{ seed.seed_image }}" alt="Seed Image">
                 </div>
+                </a>
             </div>
             {% endfor %}
         </div>
