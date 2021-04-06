@@ -1,6 +1,7 @@
 $(document).ready(function () {
     $(".sidenav").sidenav({edge: "right"});
     $('select').formSelect();
+    $('.carousel').carousel();
 
 
 /* This code was taken from Materialize Form Validation lesson by Code Institute, 
