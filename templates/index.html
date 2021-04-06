@@ -3,7 +3,25 @@
 {% block content %}
 
 <div class="row">
-    <div class="hero"></div>
+    <div class="hero">
+        <div class="valign-wrapper">
+            <p class="white-text">Here at The Seed Shelf we are passionate about gardening. We want people to be healthier, more sustainable and happier 
+            an dwe cant think of a better way to achieve this than sharing our experience and knowledge of gardening. So 
+            if you are looking to learn how to grow some delicious fruit or vegetables or want a new plant for your living room 
+            you can learn all the skills needed right here.</p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h4 class="center-align">Get Growing</h4>
+    <div class="carousel">
+    {% for seed in seeds %}
+        <a class="carousel-item" href="#one!"><img src="{{ seed.seed_image }}"></a>
+    {% endfor %}
+    </div>
+    
+    <h4 class="center-align">Most Recent Seeds</h4>
 </div>
 
 {% endblock %}
