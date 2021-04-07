@@ -136,6 +136,13 @@ def get_seed(seed_id):
     return render_template("grow_seed.html", seed=seed)
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    seed = list(mongo.db.seeds.find_one({"$text": {"$search": query}}))
+    return render_template("seeds.html", seed=seed)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
