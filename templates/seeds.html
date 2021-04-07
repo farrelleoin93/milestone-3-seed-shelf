@@ -6,7 +6,7 @@
         <div class="row card-panel">
             <form action="{{ url_for('search') }}" method="post" class="col s12">
                 <div class="row valign-wrapper center-align">
-                    <div class="input-field col s12 m8">
+                    <div class="input-field col s12">
                         <i class="fas fa-search prefix"></i>
                         <input type="text" name="query" id="query" class="validate" required>
                         <label for="query">Search Seeds</label>
@@ -17,7 +17,7 @@
 
         <div class="row">
             {% for seed in seeds %}
-            <div class="col s4">
+            <div class="col s6 m4">
                 <a href="{{ url_for('get_seed', seed_id=seed._id) }}">
                 <div class="card small s4 seed-card">
                     <img class="seed-image" src="{{ seed.seed_image }}" alt="Seed Image">
