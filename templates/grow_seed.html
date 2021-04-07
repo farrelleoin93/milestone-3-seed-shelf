@@ -4,7 +4,7 @@
 <h3 class="center-align">{{ seed.seed_name }}</h3>
 <div class="row">
     <div class="col s12 m6">
-        {{ seed.seed_description }}
+        <p class="seed-description">{{ seed.seed_description }}</p>
     </div>
     <div class="col s12 m6 image-container">
         <img class="seed-image" src="{{ seed.seed_image }}" alt="Seed Image">
@@ -12,21 +12,35 @@
 </div>
 <div class="row">
     <div class="col s12 m6">
-        <ul>
-        {% for instructions in seed.sowing_instructions %}
-            <li>{{ instructions }}</li>
-        {% endfor %}
-        </ul>
-        <ul>
-        {% for instructions in seed.growing_instructions %}
-            <li>{{ instructions }}</li>
-        {% endfor %}
-        </ul>
-        <ul>
-        {% for instructions in seed.harvesting_instructions %}
-            <li>{{ instructions }}</li>
-        {% endfor %}
-        </ul>
+        <div class="choice light-green">Sowing Instructions</div>
+        <div class="choice light-green">Growing Instructions</div>
+        <div class="choice light-green">Harvesting Instructions</div>
+    </div>
+    <div class="col s12 m6">
+        <div id="sowing-instructions">
+            <h4 class="instructions">Sowing Instructions</h4>
+            <ul>
+                {% for instructions in seed.sowing_instructions %}
+                <li><i class="fas fa-hand-holding-water"></i> {{ instructions }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div id="growing-instructions">
+            <h4 class="instructions">Growing Instructions</h4>
+            <ul>
+                {% for instructions in seed.growing_instructions %}
+                <li><i class="fas fa-seedling"></i> {{ instructions }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div id="harvesting-instructions">
+            <h4 class="instructions">Harvesting Instructions</h4>
+            <ul>
+                {% for instructions in seed.harvesting_instructions %}
+                <li><i class="fas fa-carrot"></i> {{ instructions }}</li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
 </div>
 
