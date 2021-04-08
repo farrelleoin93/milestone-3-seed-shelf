@@ -20,7 +20,8 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/home")
 def home():
-    return render_template("index.html")
+    seeds = list(mongo.db.seeds.find().sort('_id', -1).limit(5))
+    return render_template("index.html", seeds=seeds)
 
 
 @app.route("/seeds")
