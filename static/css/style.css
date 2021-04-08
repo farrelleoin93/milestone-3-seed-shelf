@@ -57,6 +57,12 @@ p {
     padding-right: 10px;
 }
 
+.carousel-images {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
 .card.small {
     height: 200px;
     width: 200px;
@@ -77,12 +83,12 @@ p {
     position: absolute;
     height: 100%;
     width: 100%;
-	background-color: rgba(0,0,0,0.5);
-	color: #f1f1f1;
-	transition: 0.6s ease-in-out;
-	opacity: 0;
-	font-size: 20px;
-	display: flex;
+	  background-color: rgba(0,0,0,0.5);
+	  color: #f1f1f1;
+	  transition: 0.6s ease-in-out;
+	  opacity: 0;
+	  font-size: 20px;
+	  display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -92,8 +98,8 @@ p {
 }
 
 .image-container {
-    display: flex;
-    justify-content: center;
+   display: flex;
+   justify-content: center;
 }
 
 .image-container img {

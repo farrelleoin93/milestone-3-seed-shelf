@@ -16,11 +16,23 @@
     <h4 class="center-align">Get Growing</h4>
     <div class="carousel">
     {% for seed in seeds %}
-        <a class="carousel-item" href="{{ url_for('get_seed', seed_id=seed._id) }}"><img src="{{ seed.seed_image }}"></a>
+        <a class="carousel-item" href="{{ url_for('get_seed', seed_id=seed._id) }}"><img class="carousel-images" src="{{ seed.seed_image }}"></a>
     {% endfor %}
     </div>
     
     <h4 class="center-align">Most Recent Seeds</h4>
+    <div class="row">
+        {% for seed in seeds %}
+            <div class="col s12 m4 flex">
+                <a href="{{ url_for('get_seed', seed_id=seed._id) }}">
+                <div class="card small s4 seed-card hoverable">
+                    <div class="overlay-card"><h4>{{ seed.seed_name }}</h4></div>
+                    <img class="seed-image" src="{{ seed.seed_image }}" alt="Seed Image">
+                </div>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
 </div>
 
 {% endblock %}
