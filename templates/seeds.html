@@ -17,11 +17,11 @@
 
         <div class="row">
             {% for seed in seeds %}
-            <div class="col s6 m4">
+            <div class="col s12 m4 flex">
                 <a href="{{ url_for('get_seed', seed_id=seed._id) }}">
-                <div class="card small s4 seed-card">
+                <div class="card small s4 seed-card hoverable">
+                    <div class="overlay-card"><h4>{{ seed.seed_name }}</h4></div>
                     <img class="seed-image" src="{{ seed.seed_image }}" alt="Seed Image">
-                    <p>{{ seed.seed_name }}</p>
                 </div>
                 </a>
             </div>
