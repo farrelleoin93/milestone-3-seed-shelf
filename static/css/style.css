@@ -24,6 +24,7 @@ p {
 .hero {
     height: 80vh;
     width: 100%;
+    color: white;
     background-image: url(../images/hero.jpg);
     position: relative;
     background-position: center;
@@ -32,6 +33,17 @@ p {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+.overlay-hero {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+	background-color: rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero-text {
