@@ -24,7 +24,6 @@ p {
     font-size: 14px;
 }
 
-
 .flex {
   display: flex;
   justify-content: center;
@@ -94,6 +93,8 @@ opacity: 1;
     justify-content: center;
     align-items: center;
 }
+
+/* --------------- seeds.html --------------- */
 
 /* --------------- grow_seed.html --------------- */
 .image-container {

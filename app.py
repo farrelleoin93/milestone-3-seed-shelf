@@ -22,7 +22,9 @@ mongo = PyMongo(app)
 def home():
     seeds = list(mongo.db.seeds.find().sort('_id', 1).limit(5))
     recents = list(mongo.db.seeds.find().sort('_id', -1).limit(9))
-    return render_template("index.html", seeds=seeds, recents=recents)
+    return render_template("index.html", 
+                            seeds=seeds, 
+                            recents=recents)
 
 
 @app.route("/seeds")
@@ -141,8 +143,8 @@ def get_seed(seed_id):
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
-    seed = list(mongo.db.seeds.find_one({"$text": {"$search": query}}))
-    return render_template("seeds.html", seed=seed)
+    seeds = list(mongo.db.seeds.find({"$text": {"$search": query}}))
+    return render_template("seeds.html", seeds=seeds)
 
 
 if __name__ == "__main__":
