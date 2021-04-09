@@ -12,6 +12,17 @@
                         <label for="query">Search Seeds</label>
                     </div>
                 </div>
+                <div class="search-button-container">
+                    <a href="{{ url_for('seeds') }}" class="btn red"><i class="fas fa-redo center-align"></i></a>
+                    <button type="submit" class="btn green search-button"><i class="fas fa-search center-align"></i></button>
+                </div>
+                <label>Browser Select</label>
+                <select name="category_name" id="category_name" class="browser-default">
+                    <option value="" disabled selected>Choose your option</option>
+                    {% for category in categories %}
+                        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                    {% endfor %}
+                </select>
             </form>
         </div>
 

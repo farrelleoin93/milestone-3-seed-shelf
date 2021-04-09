@@ -95,6 +95,14 @@ opacity: 1;
 }
 
 /* --------------- seeds.html --------------- */
+.search-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.search-button {
+  margin-left: 5px;
+}
 
 /* --------------- grow_seed.html --------------- */
 .image-container {

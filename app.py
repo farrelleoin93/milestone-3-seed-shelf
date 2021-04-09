@@ -30,7 +30,11 @@ def home():
 @app.route("/seeds")
 def seeds():
     seeds = mongo.db.seeds.find()
-    return render_template("seeds.html", seeds=seeds)
+    categories = mongo.db.categories.find().sort(
+        "category_name", 1)
+
+    return render_template("seeds.html", seeds=seeds,
+                                         categories=categories)
 
 
 @app.route("/register", methods=["GET", "POST"])
