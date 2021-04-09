@@ -4,9 +4,15 @@
 /* --------------- General --------------- */
 body {
     font-family: "Roboto", sans-serif;
-    height: 100%;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
     max-width: 100%;
     overflow-x: hidden;
+}
+
+main {
+  flex: 1 0 auto;
 }
 
 .site-container {
@@ -76,7 +82,7 @@ p {
 .col:hover .overlay-card {
 opacity: 1;
 }
-/* --------------- Index.html --------------- */
+/* --------------- index.html --------------- */
 
 .overlay-hero {
     position: absolute;
@@ -125,6 +131,7 @@ opacity: 1;
 
 footer {
     height: auto;
+    margin-bottom: 0;
   }
   
   .footer-items {
