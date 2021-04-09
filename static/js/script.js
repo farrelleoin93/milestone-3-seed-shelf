@@ -1,7 +1,8 @@
 $(document).ready(function () {
-    $(".sidenav").sidenav({edge: "right"});
+    $(".sidenav").sidenav({edge: "right"})
     $('select').formSelect();
-    $('.carousel').carousel();
+    $('.carousel').carousel({
+        indicators: true});
 
 
 /* This code was taken from Materialize Form Validation lesson by Code Institute, 

@@ -36,7 +36,11 @@ You can see the live website [here]().
 ### <a name="user-stories">User Stories</a>
 
 #### All Users
-1. 
+1. As a user I want to be able to understand what the site is for immedietly from the home page.
+2. As a user I want to be able to easily navigate through the site
+
+#### Unregistered Users
+1.  As an unregistered user I would like
 
 
 ### <a name="goals">Site Owner Goals</a>

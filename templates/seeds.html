@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="container">
+    <div class="site-container">
         <h3 class="center-align">Seeds</h3>
 
         <div class="row card-panel">
@@ -17,7 +17,7 @@
 
         <div class="row">
             {% for seed in seeds %}
-            <div class="col s12 m4 flex">
+            <div class="col s12 m3 flex">
                 <a href="{{ url_for('get_seed', seed_id=seed._id) }}">
                 <div class="card small s4 seed-card hoverable">
                     <div class="overlay-card"><h4>{{ seed.seed_name }}</h4></div>
