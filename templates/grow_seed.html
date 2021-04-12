@@ -2,6 +2,18 @@
 {% block content %}
 
 <div class="site-container">
+    {% if session.user|lower == seed.created_by|lower %}
+        <div class="row edit-buttons">
+            <div class="col offset-l10 l1">
+                <a href="#" class="btn-floating waves-effect waves-light blue"><i class="fas fa-pencil-alt"></i></a>
+            </div>
+            <div class="col l1">
+                <button>
+                    <a href="#" class="btn-floating waves-effect waves-light red"><i class="fas fa-trash"></i></a>
+                </button>
+            </div>
+        </div>
+    {% endif %}
     <h3 class="center-align">{{ seed.seed_name }}</h3>
     <div class="row">
         <div class="col s12 m6">

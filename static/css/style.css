@@ -105,6 +105,11 @@ opacity: 1;
 }
 
 /* --------------- grow_seed.html --------------- */
+.edit-buttons{
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
 .image-container {
    display: flex;
    justify-content: center;
