@@ -1,8 +1,10 @@
 $(document).ready(function () {
     $(".sidenav").sidenav({edge: "right"})
     $('select').formSelect();
-    $('.carousel').carousel({
-        indicators: true});
+    $('.carousel.carousel-slider').carousel({
+        fullWidth: true,
+        indicators: true,
+        numVisible: 5});
 
 
 /* This code was taken from Materialize Form Validation lesson by Code Institute, 

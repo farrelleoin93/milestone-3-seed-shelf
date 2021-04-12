@@ -21,7 +21,7 @@ mongo = PyMongo(app)
 @app.route("/home")
 def home():
     seeds = list(mongo.db.seeds.find().sort('_id', 1).limit(5))
-    recents = list(mongo.db.seeds.find().sort('_id', -1).limit(9))
+    recents = list(mongo.db.seeds.find().sort('_id', -1).limit(3))
     return render_template("index.html", 
                             seeds=seeds, 
                             recents=recents)
@@ -92,8 +92,8 @@ def login():
     return render_template("login.html")
 
 
-@app.route("/profile/<username>", methods=["GET", "POST"])
-def profile(username):
+@app.route("/profile/", methods=["GET", "POST"])
+def profile():
     # Grab the session users username form the database
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
@@ -113,7 +113,7 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/add_seed", methods=["GET", "POST"])
+@app.route("/seed/add", methods=["GET", "POST"])
 def add_seed():
     if request.method == "POST":
         seed = {
@@ -137,7 +137,7 @@ def add_seed():
     return render_template("add_seed.html", categories=categories)
 
 
-@app.route("/get_seed/<seed_id>")
+@app.route("/seed/<seed_id>/view")
 def get_seed(seed_id):
     seed = mongo.db.seeds.find_one({"_id": ObjectId(seed_id)})
 
