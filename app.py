@@ -137,6 +137,14 @@ def add_seed():
     return render_template("add_seed.html", categories=categories)
 
 
+@app.route("/seed/<seed_id>/edit", methods=["GET", "POST"])
+def edit_seed(seed_id):
+    seed = mongo.db.seeds.find_one({"_id": ObjectId(seed_id)})
+
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("edit_seed.html", seed=seed, categories=categories)
+
+
 @app.route("/seed/<seed_id>/view")
 def get_seed(seed_id):
     seed = mongo.db.seeds.find_one({"_id": ObjectId(seed_id)})
