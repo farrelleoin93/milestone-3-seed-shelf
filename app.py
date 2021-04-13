@@ -161,6 +161,13 @@ def edit_seed(seed_id):
     return render_template("edit_seed.html", seed=seed, categories=categories)
 
 
+@app.route("/seed/<seed_id>/delete")
+def delete_seed(seed_id):
+    mongo.db.seeds.remove({"_id": ObjectId(seed_id)})
+    flash("Seed Successfully Deleted")
+    return redirect(url_for("seeds"))
+
+
 @app.route("/seed/<seed_id>/view")
 def get_seed(seed_id):
     seed = mongo.db.seeds.find_one({"_id": ObjectId(seed_id)})
