@@ -54,19 +54,6 @@
         </ul>
     </header>
 
-    <section>
-        <!-- Flash messages -->
-        {% with messages = get_flashed_messages() %}
-            {% if messages %}
-                {% for message in messages %}
-                    <div class="row flashes">
-                        <h4 class="center-align">{{ message }}</h4>
-                    </div>
-                {% endfor %}
-            {% endif %}
-        {% endwith %}
-    </section>
-
     <main>
         {% block content %}
         {% endblock %}
@@ -101,6 +88,18 @@
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     {% block scripts %}
     {% endblock %}
+
+    <script>
+        // Flash messages 
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    M.toast({html: "{{ message }}", classes: 'rounded'})
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </script>
+
 </body>
 
 </html>
