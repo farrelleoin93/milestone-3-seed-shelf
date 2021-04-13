@@ -139,8 +139,24 @@ def add_seed():
 
 @app.route("/seed/<seed_id>/edit", methods=["GET", "POST"])
 def edit_seed(seed_id):
-    seed = mongo.db.seeds.find_one({"_id": ObjectId(seed_id)})
+    if request.method == "POST":
+        submit = {
+            "seed_name": request.form.get("seed_name"),
+            "category_name": request.form.get("category_name"),
+            "seed_description": request.form.get("seed_description"),
+            "seed_image": request.form.get("seed_image"),
+            "sowing_instructions": request.form.get(
+                "sowing_instructions").splitlines(),
+            "growing_instructions": request.form.get(
+                "growing_instructions").splitlines(),
+            "harvesting_instructions": request.form.get(
+                "harvesting_instructions").splitlines(),
+            "created_by": session["user"]
+        }
+        mongo.db.seeds.update({"_id": ObjectId(seed_id)}, submit)
+        flash("Seed Successfully Updated")
 
+    seed = mongo.db.seeds.find_one({"_id": ObjectId(seed_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_seed.html", seed=seed, categories=categories)
 
