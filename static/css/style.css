@@ -98,10 +98,15 @@ opacity: 1;
 .search-button-container {
   display: flex;
   justify-content: center;
+  margin-top: 10px;
 }
 
 .search-button {
   margin-left: 5px;
+}
+
+.search-margin {
+  margin-bottom: 0;
 }
 
 /* --------------- grow_seed.html --------------- */
