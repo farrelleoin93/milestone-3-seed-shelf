@@ -97,10 +97,14 @@ def profile():
     # Grab the session users username form the database
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-    return render_template("profile.html", username=username)
+    seeds = list(mongo.db.seeds.find(
+        {"created_by": session["user"]}).sort("_id", -1))
+
 
     if session["user"]:
-        return render_template("profile.html", username=username)
+        return render_template("profile.html", 
+                                username=username,
+                                seeds=seeds)
 
     return redirect(url_for("login"))
 
