@@ -111,15 +111,25 @@ def profile():
 
 @app.route("/logout")
 def logout():
-    # Remove user from session cookies
-    flash("You have been logged out")
-    session.pop("user")
-    return redirect(url_for("login"))
+    # If user is not logged in
+    if "user" not in session:
+        flash("You are already logged out")
+        return redirect(url_for("home"))
+
+    else:
+        # Remove user from session cookies
+        flash("You have been logged out")
+        session.pop("user")
+        return redirect(url_for("login"))
 
 
 @app.route("/seed/add", methods=["GET", "POST"])
 def add_seed():
-    if request.method == "POST":
+    if "user" not in session:
+        flash("You need to be logged in to do that")
+        return redirect(url_for("login"))
+
+    elif request.method == "POST":
         seed = {
             "seed_name": request.form.get("seed_name"),
             "category_name": request.form.get("category_name"),
@@ -143,7 +153,20 @@ def add_seed():
 
 @app.route("/seed/<seed_id>/edit", methods=["GET", "POST"])
 def edit_seed(seed_id):
-    if request.method == "POST":
+
+    seed = mongo.db.seeds.find_one({"_id": ObjectId(seed_id)})
+    seed_owner = seed["created_by"]
+
+    if "user" not in session:
+        flash("You need to be logged in to do that")
+        return redirect(url_for("login"))
+
+    elif session["user"] != "admin" and session["user"] != seed_owner:
+        flash("This seed does not belong to you")
+
+        return redirect(url_for("seeds"))
+
+    elif request.method == "POST":
         submit = {
             "seed_name": request.form.get("seed_name"),
             "category_name": request.form.get("category_name"),
@@ -155,7 +178,7 @@ def edit_seed(seed_id):
                 "growing_instructions").splitlines(),
             "harvesting_instructions": request.form.get(
                 "harvesting_instructions").splitlines(),
-            "created_by": session["user"]
+            "created_by": seed_owner
         }
         mongo.db.seeds.update({"_id": ObjectId(seed_id)}, submit)
         flash("Seed Successfully Updated")
