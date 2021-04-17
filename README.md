@@ -188,6 +188,9 @@ The following websites were used as learning resources throughout the building o
 ### Bugs fixed while building the website:
 
 1. cards displaying 3 times, change location of for loop
+2. deleting session user then logging out crashed the site.
+3. change created by part of submit in edit so original creater remains creater
+4. fix splitlines bug
 
 ## <a name="deployment">Deployment</a>
 

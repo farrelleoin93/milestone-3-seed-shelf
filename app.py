@@ -136,11 +136,11 @@ def add_seed():
             "seed_description": request.form.get("seed_description"),
             "seed_image": request.form.get("seed_image"),
             "sowing_instructions": request.form.get(
-                "sowing_instructions").splitlines(),
+                "sowing_instructions"),
             "growing_instructions": request.form.get(
-                "growing_instructions").splitlines(),
+                "growing_instructions"),
             "harvesting_instructions": request.form.get(
-                "harvesting_instructions").splitlines(),
+                "harvesting_instructions"),
             "created_by": session["user"]
         }
         mongo.db.seeds.insert_one(seed)
@@ -155,6 +155,7 @@ def add_seed():
 def edit_seed(seed_id):
 
     seed = mongo.db.seeds.find_one({"_id": ObjectId(seed_id)})
+    categories = mongo.db.categories.find().sort("category_name", 1)
     seed_owner = seed["created_by"]
 
     if "user" not in session:
@@ -167,21 +168,23 @@ def edit_seed(seed_id):
         return redirect(url_for("seeds"))
 
     elif request.method == "POST":
-        submit = {
+        edit = {"$set": {
             "seed_name": request.form.get("seed_name"),
             "category_name": request.form.get("category_name"),
             "seed_description": request.form.get("seed_description"),
             "seed_image": request.form.get("seed_image"),
             "sowing_instructions": request.form.get(
-                "sowing_instructions").splitlines(),
+                "sowing_instructions"),
             "growing_instructions": request.form.get(
-                "growing_instructions").splitlines(),
+                "growing_instructions"),
             "harvesting_instructions": request.form.get(
-                "harvesting_instructions").splitlines(),
+                "harvesting_instructions"),
             "created_by": seed_owner
-        }
-        mongo.db.seeds.update({"_id": ObjectId(seed_id)}, submit)
+        }}
+        mongo.db.seeds.update({"_id": ObjectId(seed_id)}, edit)
         flash("Seed Successfully Updated")
+        return render_template(
+            "grow_seed.html", seed=seed, categories=categories)
 
     seed = mongo.db.seeds.find_one({"_id": ObjectId(seed_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
@@ -190,9 +193,22 @@ def edit_seed(seed_id):
 
 @app.route("/seed/<seed_id>/delete")
 def delete_seed(seed_id):
-    mongo.db.seeds.remove({"_id": ObjectId(seed_id)})
-    flash("Seed Successfully Deleted")
-    return redirect(url_for("seeds"))
+    seed = mongo.db.seeds.find_one({"_id": ObjectId(seed_id)})
+    seed_owner = seed["created_by"]
+
+    if "user" not in session:
+        flash("You need to be logged in to do that")
+        return redirect(url_for("login"))
+
+    elif session["user"] != "admin" and session["user"] != seed_owner:
+        flash("This seed does not belong to you")
+
+        return redirect(url_for("seeds"))
+    
+    else:
+        mongo.db.seeds.remove({"_id": ObjectId(seed_id)})
+        flash("Seed Successfully Deleted")
+        return redirect(url_for("seeds"))
 
 
 @app.route("/seed/<seed_id>/view")
