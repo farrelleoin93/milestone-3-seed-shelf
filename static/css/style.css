@@ -64,6 +64,11 @@ p {
   object-fit: cover;
 }
 
+.profile-seed-image {
+  height: 300px;
+  object-fit: cover;
+}
+
 .overlay-card {
   position: absolute;
   height: 100%;
