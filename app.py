@@ -183,8 +183,7 @@ def edit_seed(seed_id):
         }}
         mongo.db.seeds.update({"_id": ObjectId(seed_id)}, edit)
         flash("Seed Successfully Updated")
-        return render_template(
-            "grow_seed.html", seed=seed, categories=categories)
+        return redirect(url_for("get_seed", seed_id=ObjectId(seed_id)))
 
     seed = mongo.db.seeds.find_one({"_id": ObjectId(seed_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
