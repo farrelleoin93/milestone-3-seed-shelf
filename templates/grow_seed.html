@@ -2,7 +2,7 @@
 {% block content %}
 
 <div class="site-container">
-    {% if session.user|lower == seed.created_by|lower %}
+    {% if session.user|lower == seed.created_by|lower or session.user|lower == "admin" %}
         <div class="row edit-buttons">
             <div class="col offset-l10 l1">
                 <a href="{{ url_for('edit_seed', seed_id=seed._id) }}" class="btn-floating waves-effect waves-light blue"><i class="fas fa-pencil-alt"></i></a>
