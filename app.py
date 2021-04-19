@@ -244,6 +244,11 @@ def filter():
                             category_name=category_name)
 
 
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
