@@ -95,6 +95,11 @@ p {
   object-fit: cover;
 }
 
+.grow-seed {
+  display: flex;
+  justify-content: center;
+}
+
 .grow-seed img {
   width: 350px;
   height: 350px;

@@ -21,6 +21,7 @@
         </div>
         <div class="col s12 m6">
             <p class="seed-description">{{ seed.seed_description }}</p>
+            <hr>
             <p>Created by: {{ seed.created_by }}</p>
         </div>
     </div>
@@ -29,6 +30,7 @@
             <div class="col s12 instructions">
                 <div id="sowing-instructions">
                     <h4>Sowing Instructions</h4>
+                    <hr>
                     <ul>
                         {% for instructions in seed.sowing_instructions.splitlines() %}
                         <li><i class="fas fa-hand-holding-water"></i> {{ instructions }}</li>
@@ -37,6 +39,7 @@
                 </div>
                 <div id="growing-instructions">
                     <h4>Growing Instructions</h4>
+                    <hr>
                     <ul>
                         {% for instructions in seed.growing_instructions.splitlines() %}
                         <li><i class="fas fa-seedling"></i> {{ instructions }}</li>
@@ -45,6 +48,7 @@
                 </div>
                 <div id="harvesting-instructions">
                     <h4>Harvesting Instructions</h4>
+                    <hr>
                     <ul>
                         {% for instructions in seed.harvesting_instructions.splitlines() %}
                         <li><i class="fas fa-carrot"></i> {{ instructions }}</li>
