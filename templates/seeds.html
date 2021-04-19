@@ -16,10 +16,16 @@
             <form action="{{ url_for('filter', seeds=seeds) }}" method="post" class="col s12 m6">
                 <div class="input-field col s12">
                     <select name="category_name" id="category_name" onchange="this.form.submit()">
+                        {% if category_name %}
+                            <option value="" disabled selected>{{ category_name }}</option>
+                        {% else %}
                         <option value="" disabled selected>Choose a seed type</option>
-                        {% for category in categories %}
-                        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
-                        {% endfor %}
+                        {% endif %}
+                            <option value="Herbs">Herbs</option>
+                            <option value="Fruit">Fruit</option>
+                            <option value="Vegetables">Vegetables</option>
+                            <option value="Flowers">Flowers</option>
+                            <option value="Houseplants">Houseplants</option>
                     </select>
                 </div>
             </form>
