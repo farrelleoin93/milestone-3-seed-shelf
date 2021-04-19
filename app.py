@@ -131,8 +131,8 @@ def add_seed():
 
     elif request.method == "POST":
         seed = {
-            "seed_name": request.form.get("seed_name"),
-            "category_name": request.form.get("category_name"),
+            "seed_name": request.form.get("seed_name").lower(),
+            "category_name": request.form.get("category_name").lower(),
             "seed_description": request.form.get("seed_description"),
             "seed_image": request.form.get("seed_image"),
             "sowing_instructions": request.form.get(
@@ -169,8 +169,8 @@ def edit_seed(seed_id):
 
     elif request.method == "POST":
         edit = {"$set": {
-            "seed_name": request.form.get("seed_name"),
-            "category_name": request.form.get("category_name"),
+            "seed_name": request.form.get("seed_name").lower(),
+            "category_name": request.form.get("category_name").lower(),
             "seed_description": request.form.get("seed_description"),
             "seed_image": request.form.get("seed_image"),
             "sowing_instructions": request.form.get(
@@ -203,7 +203,7 @@ def delete_seed(seed_id):
         flash("This seed does not belong to you")
 
         return redirect(url_for("seeds"))
-    
+
     else:
         mongo.db.seeds.remove({"_id": ObjectId(seed_id)})
         flash("Seed Successfully Deleted")
@@ -222,6 +222,26 @@ def search():
     query = request.form.get("query")
     seeds = list(mongo.db.seeds.find({"$text": {"$search": query}}))
     return render_template("seeds.html", seeds=seeds)
+
+
+@app.route("/filter", methods=["GET", "POST"])
+def filter():
+    category_name = request.form.get("category_name").lower()
+    if category_name == "herbs":
+        seeds = list(mongo.db.seeds.find({"category_name": "herbs"}))
+    elif category_name == "vegetables":
+        seeds = list(mongo.db.seeds.find({"category_name": "vegetables"}))
+    elif category_name == "houseplants":
+        seeds = list(mongo.db.seeds.find({"category_name": "houseplants"}))
+    elif category_name == "fruit":
+        seeds = list(mongo.db.seeds.find({"category_name": "fruit"}))
+    elif category_name == "fruit":
+        seeds = list(mongo.db.seeds.find({"category_name": "flowers"}))
+    
+    return render_template(
+                            "seeds.html",
+                            seeds=seeds,
+                            category_name=category_name)
 
 
 if __name__ == "__main__":

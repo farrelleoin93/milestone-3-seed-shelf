@@ -4,7 +4,7 @@
         <h3 class="center-align">Seeds</h3>
 
         <div class="row card-panel">
-            <form action="{{ url_for('search') }}" method="post" class="col s12">
+            <form action="{{ url_for('search') }}" method="post" class="col s12 m6">
                 <div class="row search-margin valign-wrapper center-align">
                     <div class="input-field col s12">
                         <i class="fas fa-search prefix"></i>
@@ -12,15 +12,15 @@
                         <label for="query">Search Seeds</label>
                     </div>
                 </div>
-                <select name="category_name" id="category_name" class="browser-default">
-                    <option value="" disabled selected>Choose your option</option>
-                    {% for category in categories %}
+            </form>
+            <form action="{{ url_for('filter', seeds=seeds) }}" method="post" class="col s12 m6">
+                <div class="input-field col s12">
+                    <select name="category_name" id="category_name" onchange="this.form.submit()">
+                        <option value="" disabled selected>Choose a seed type</option>
+                        {% for category in categories %}
                         <option value="{{ category.category_name }}">{{ category.category_name }}</option>
-                    {% endfor %}
-                </select>
-                <div class="search-button-container">
-                    <a href="{{ url_for('seeds') }}" class="btn red"><i class="fas fa-redo center-align"></i></a>
-                    <button type="submit" class="btn green search-button"><i class="fas fa-search center-align"></i></button>
+                        {% endfor %}
+                    </select>
                 </div>
             </form>
         </div>
