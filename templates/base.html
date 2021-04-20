@@ -61,11 +61,15 @@
     </main>
 
     <footer class="container-fluid light-green">
-        <div class="row">
-            <div class="col-12 footer-items">
-                <p class="footer-items">© Copyright - The Seed Shelf</p>
+        <div class="row footer">
+            <div class="col s12 m6 footer-items">
+                <form id="contactForm" onsubmit="return sendMail(this);">
+                    <input type="email" name="email" id="emailaddress" placeholder="Email Address" class="form-control" required />
+                    <button type="submit" id="send-button"><i class="far fa-paper-plane"></i></button>    
+                </form>
             </div>
-            <div class="col-12 social-links">
+            <div class="col s12 m6 social-links">
+                <p class="footer-items">© Copyright - The Seed Shelf</p>
                 <ul class="list-inline">
                     <li class="list-inline-item">
                         <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook aria-hidden icon"></i> <span class="sr-only">Facebook</span></a>
