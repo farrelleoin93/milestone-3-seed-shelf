@@ -22,8 +22,8 @@ mongo = PyMongo(app)
 def home():
     seeds = list(mongo.db.seeds.find().sort('_id', 1).limit(5))
     recents = list(mongo.db.seeds.find().sort('_id', -1).limit(3))
-    return render_template("index.html", 
-                            seeds=seeds, 
+    return render_template("index.html",
+                            seeds=seeds,
                             recents=recents)
 
 
@@ -33,8 +33,9 @@ def seeds():
     categories = mongo.db.categories.find().sort(
         "category_name", 1)
 
-    return render_template("seeds.html", seeds=seeds,
-                                         categories=categories)
+    return render_template("seeds.html",
+                            seeds=seeds,
+                            categories=categories)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -57,8 +58,8 @@ def register():
         # Put the user into the 'session' cookie
         session["user"] = request.form.get("username").lower()
         flash("Your registation was sucessfull")
-        return render_template(url_for(
-            "profile", username=session["user"]))
+        return redirect(url_for(
+                    "profile", username=session["user"]))
 
     return render_template("register.html")
 
@@ -92,7 +93,7 @@ def login():
     return render_template("login.html")
 
 
-@app.route("/profile/", methods=["GET", "POST"])
+@app.route("/profile", methods=["GET", "POST"])
 def profile():
     # Grab the session users username form the database
     username = mongo.db.users.find_one(
@@ -100,9 +101,8 @@ def profile():
     seeds = list(mongo.db.seeds.find(
         {"created_by": session["user"]}).sort("_id", -1))
 
-
     if session["user"]:
-        return render_template("profile.html", 
+        return render_template("profile.html",
                                 username=username,
                                 seeds=seeds)
 
