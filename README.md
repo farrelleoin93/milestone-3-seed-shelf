@@ -191,6 +191,7 @@ The following websites were used as learning resources throughout the building o
 2. deleting session user then logging out crashed the site.
 3. change created by part of submit in edit so original creater remains creater
 4. fix splitlines bug
+4. fix registration but by changing from render template to redirect
 
 ## <a name="deployment">Deployment</a>
 
