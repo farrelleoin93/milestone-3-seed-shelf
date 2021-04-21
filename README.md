@@ -37,31 +37,43 @@ You can see the live website [here]().
 
 #### All Users
 1. As a user I want to be able to understand what the site is for immedietly from the home page.
-2. As a user I want to be able to easily navigate through the site
+2. As a user I want to be able to easily navigate through the site.
+3. As a user I want to be able to search for seeds that I would like to grow.
+4. As a user I want to be able to filter the seeds by categories so that I can easily find the types of seeds that I want.
+5. As a user I would like to be able to recieve emails containing information about gardening.
 
 #### Unregistered Users
-1.  As an unregistered user I would like
+1. As an unregistered user I would like to be able to easily register for this website.
+2. As an unregistered user I would like to be able to view all the seeds even when I am not registered.
+
+#### Registered Users
+1. As a registered user I would like to be able to add my own seed to the collection of seeds displayed on the website so that I can share the knowledge I have with like minded people.
+2. As a registered user I would like to be able to view any seeds that I have added easily and locate them in the same place.
+3. As a registered user I would like to be able to edit any seed that I have added in case I made a mistake or would like to change something.
+4. As a registered user I would like to be able to delete any seeds that I have added.
 
 
 ### <a name="goals">Site Owner Goals</a>
 
-1. 
+1. As the owner I want to inspire people to grow there own plants and discover the joys of gardening.
+2. As the owner I want to provide people with a visually appealing website.
+3. As the owner I want to provide people with clear instructions on how to grow different types of plants.
+4. As the owner I want to increase the volume of people that visit this website over time.
 
 
 ## <a name="user-requirements">User Requirements and Expectations</a>
 
 ---
 
-### Requirements
-
 - The user should be presented with a visually appealing website.
 - The user should be able to clearly navigate through the website even on their first visit.
-
-- The user should be able to contact the owner of the website.
-
-
-### Expectations
-
+- The user should be able to learn how to grow seeds.
+- The user should be search for a specific seed or filter the seeds by a category.
+- The user should be able to register for the website.
+- The user should be able to add, edit and delete their own seeds. 
+- The user should be able to view any seeds that they have added on their own profile page.
+- The user should not be able to view the features that are reserved for registered users.
+- The user should be able to sign up for a newsletter.
 
 
 ## <a name="design-choices">Design Choices</a>
@@ -76,8 +88,7 @@ You can see the live website [here]().
 
 
 ### Icons
-- The icons that I used in this project were provided by [Font Awesome](https://fontawesome.com/). I decided to use icons as they offer a pleasant visual aide to the site, 
-also users tend to know that icons usually work as buttons.
+- The icons that I used in this project were provided by [Font Awesome](https://fontawesome.com/). I decided to use icons as they offer a pleasant visual aide to the site, also users tend to know that icons usually work as buttons.
 
 ## <a name="wireframes">Wireframes</a>
 
@@ -98,15 +109,19 @@ The wireframes for the actual website can be found at the following links:
 ---
 The main features of this website are:
 - an attractive design.
-- a navigation bar that the user understands how to use even on their first visit to the website 
-and that brings them to the appropriate part of the website.
+- a navigation bar that the user understands how to use even on their first visit to the website and that brings them to the appropriate part of the website.
+- a carousel that shows the user images of some of the seeds that they could learn to grow, these images also act as links to the page on how to grow the seed.
+- a "Recently Added" section that displays the last three seeds that have been added.
+- pages that provide users with the information on how to grow plants, fruit, vegatables and herbs.
+- an add seed page so that users can add their own information on how to grow a seed.
+- a profile page that allows users to edit or delete the seeds that they have added.
+- registration, log in and log out pages.
 - a working contact us form so that the users can ask questions and give feedback about the website.
 - links to social network platforms.
 
 Features that will be added in the future are:
-- 
-
-
+- an option to add videos of seeds growing.
+- a comment section so people can provide some extra tips on how to grow seeds.
 
 ## <a name="technologies">Technologies</a>
 
@@ -117,6 +132,7 @@ Features that will be added in the future are:
 - [HTML5](https://en.wikipedia.org/wiki/HTML5)
 - [CSS3](https://en.wikipedia.org/wiki/CSS3)
 - [JavaScript](https://en.wikipedia.org/wiki/javascript)
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
 ### Other
 
@@ -126,27 +142,27 @@ Features that will be added in the future are:
    - The icons used were found at Font Awesome.
 3. [Ucraft](https://www.ucraft.com/free-logo-maker)
    - Ucraft was used to make the logo for the favicon.
-4. [Bootstrap 4.5](https://getbootstrap.com/)
-   - Bootstrap was used throughout this website, in 
-   particular for the navbar, form and for the responsiveness and styling.
+4. [Materialize](https://materializecss.com/)
+   - Materialize was used throughout this website, in 
+   particular for the navbar, form, styling and for the responsiveness.
 5. [jQuery](https://jquery.com/)
    - jQuery was used through this website for interactive features.
-6. [Google Fonts](https://fonts.google.com/)
+6. [Flask](https://flask.palletsprojects.com/en/1.1.x/)
+   - Flask was used throughout this website.
+7. [Google Fonts](https://fonts.google.com/)
    - The fonts used for this websites were found at Google Fonts.
-7. [Balsamiq](https://balsamiq.com/)
+8. [Balsamiq](https://balsamiq.com/)
    - The wireframes were made using Balsamiq.
-8. [Github](https://github.com/)
+9. [Github](https://github.com/)
    - This project was stored on Github.
-9. [Gitpod](https://www.gitpod.io/)
+10. [Gitpod](https://www.gitpod.io/)
    - Gitpod was used to write the code used for this website.
-10. [Git](https://en.wikipedia.org/wiki/Git)
+11. [Git](https://en.wikipedia.org/wiki/Git)
     - The version control system used for this project was Git.
-11. [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools)
+12. [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools)
     - Chrome DevTools was used to test out code before adding it to this website.
-12. [WebFormatter](https://webformatter.com/html) 
+13. [WebFormatter](https://webformatter.com/html) 
     - WebFormatter was used to format the html code.
-13. [Google Maps API](https://developers.google.com/maps/documentation/javascript/overview)
-    - The Google Maps API was used for the map.
 14. [Am I Responsive](http://ami.responsivedesign.is/) 
     - Am I Responsive was used to see how the website looked on different devices.
 16. [Unsplash](https://unsplash.com/)
@@ -170,28 +186,7 @@ The following websites were used as learning resources throughout the building o
 ## <a name="testing">Testing</a>
 
 ---
-
-1. 
-
-#### Manual Testing 
-- 
-
-
-#### Testing User Stories
-
-1. 
-
-## <a name="bugs">Bugs</a>
-
----
-
-### Bugs fixed while building the website:
-
-1. cards displaying 3 times, change location of for loop
-2. deleting session user then logging out crashed the site.
-3. change created by part of submit in edit so original creater remains creater
-4. fix splitlines bug
-4. fix registration but by changing from render template to redirect
+The details of testing can be found [here](TESTING.md)
 
 ## <a name="deployment">Deployment</a>
 
