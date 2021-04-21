@@ -1,16 +1,21 @@
 {% extends "base.html" %}
 {% block content %}
 
-
-    <div class="row">
-        <div class="col s12 m8 offset-m2"">
-            <div class="card-panel">
-                <div class="center-align">{{username}}'s Profile</div>
+<div class="container">
+        <div class="center-align profile-heading">
+                <p>Hey <strong>{{username}}</strong>, you can keep track of all your seeds here. Feel free to edit or delete your
+                    current
+                    seeds or add even more.</p>
+        </div>
+        <div class="row profile">
+            <div class="col s8 offset-s2">
+                <h2 class="center-align">My Seeds</h2>
+            </div>
+            <div class="col s2">
+                <a href="{{ url_for('add_seed') }}" class="btn-floating btn-large waves-effect waves-light red"><i
+                        class="fas fa-plus-circle"></i></a>
             </div>
         </div>
-    </div>
-    
-    <div class="site-container">
         {% if seeds|length > 0 %}
             <div class="row">
                 {% for seed in seeds if session.user|lower == seed.created_by|lower %}
@@ -27,7 +32,7 @@
                                     <strong>Created By:</strong> {{ seed.created_by }}
                                 </p>
                             </div>
-                            <div>
+                            <div class="profile-buttons">
                                 <a href="{{ url_for('edit_seed', seed_id=seed._id) }}" class="btn-floating waves-effect waves-light blue"><i class="fas fa-pencil-alt"></i></a>
                                 <button>
                                     <a data-target="modal1" class="btn-floating modal-trigger waves-effect waves-light red"><i class="fas fa-trash"></i></a>
@@ -37,8 +42,15 @@
                     </div>
                 {% endfor %}
             </div>
+        {% else %}
+        <div class="center-align row">
+            <div>
+                <p>You have no added any seeds yet!</p>
+                <p>Click <a href="{{ url_for('add_seed') }}">here</a> if you would like to add a seed.</p>
+            </div>
+        </div>
         {% endif %}
-    </div>
+</div>
     
 
 {% endblock %}
