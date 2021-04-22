@@ -224,7 +224,7 @@ def search():
     return render_template("seeds.html", seeds=seeds)
 
 
-@app.route("/filter", methods=["GET", "POST"])
+@app.route("/filter", methods=["POST"])
 def filter():
     category_name = request.form.get("category_name").capitalize()
     if category_name == "Herbs":

@@ -14,7 +14,7 @@
                     </div>
                 </div>
             </form>
-            <form action="{{ url_for('filter', seeds=seeds) }}" method="post" class="col s12 m6">
+            <form action="{{ url_for('filter') }}" method="post" class="col s12 m6">
                 <div class="input-field col s12">
                     <select name="category_name" id="category_name" onchange="this.form.submit()">
                         {% if category_name %}
