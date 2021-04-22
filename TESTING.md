@@ -17,3 +17,4 @@
 3. change created by part of submit in edit so original creater remains creater
 4. fix splitlines bug
 4. fix registration but by changing from render template to redirect
+6. vegetables bug - remove unnecessary variable
