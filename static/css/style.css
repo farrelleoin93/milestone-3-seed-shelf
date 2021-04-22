@@ -128,6 +128,12 @@ p {
 .col:hover .overlay-card {
 opacity: 1;
 }
+
+.error-image {
+  width: 100%;
+  margin-top: 30px;
+}
+
 /* --------------- index.html --------------- */
 
 .overlay-hero {
