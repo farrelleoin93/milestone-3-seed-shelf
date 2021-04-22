@@ -37,7 +37,11 @@
                 <a href="{{ url_for('get_seed', seed_id=seed._id) }}">
                 <div class="card small s4 hoverable">
                     <div class="overlay-card"><h4>{{ seed.seed_name }}</h4></div>
-                    <img class="seed-image" src="{{ seed.seed_image }}" alt="Seed Image">
+                    {% if seed.seed_image == "" %}
+                        <img class="seed-image" src="static/images/plant-icon.png" alt="Seed Image">
+                    {% else %}
+                        <img class="seed-image" src="{{ seed.seed_image }}" alt="Seed Image">
+                    {% endif %}
                 </div>
                 </a>
             </div>
