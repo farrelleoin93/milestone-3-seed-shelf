@@ -250,6 +250,11 @@ def error_404(error):
     return render_template('errors/404.html', error=error), 404
 
 
+# 500 ERROR
+@app.errorhandler(500)
+def error_500(error):
+    return render_template('errors/500.html', error=error), 500
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
