@@ -28,10 +28,11 @@
                                 {% else %}
                                     <img class="profile-seed-image" src="{{ seed.seed_image }}" alt="Seed Image">
                                 {% endif %}
-                                <span class="card-title">{{ seed.seed_name }}</span>
                             </div>
                             <div class="card-content">
                                 <p>
+                                    <strong>Plant:</strong> {{ seed.seed_name }}
+                                    <br>
                                     <strong>Plant Type:</strong> {{ seed.category_name }}
                                     <br>
                                     <strong>Created By:</strong> {{ seed.created_by }}
