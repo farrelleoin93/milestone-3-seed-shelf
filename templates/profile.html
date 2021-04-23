@@ -23,7 +23,11 @@
                     <div class="col s12 m4">
                         <div class="card">
                             <div class="card-image">
-                                <img class="profile-seed-image" src="{{ seed.seed_image }}" alt="Seed Image">
+                                {% if seed.seed_image == "" %}
+                                    <img class="profile-seed-image" src="static/images/plant-icon.png" alt="Seed Image">
+                                {% else %}
+                                    <img class="profile-seed-image" src="{{ seed.seed_image }}" alt="Seed Image">
+                                {% endif %}
                                 <span class="card-title">{{ seed.seed_name }}</span>
                             </div>
                             <div class="card-content">
