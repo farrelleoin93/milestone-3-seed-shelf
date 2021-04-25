@@ -1,6 +1,41 @@
-#### Manual Testing 
-- 
+## Index
+- [User Stories](#userstories)
+- [Features](#features)
+- [Technologies](#technologies)
+- [Testing](#testing)
+- [Bugs](#bugs)
 
+### <a name="#userstories">Testing User Stories</a> 
+### All Users
+1. "As a user I want to be able to understand what the site is for immedietly from the home page."
+   - The home page has a large hero image of potting equipment and also a short couple of lines that briefly explains what the website does.
+   - The home page also has an images carousel of some of the plants that people have added. These images are also links to the page where the user can learn to grow the plant.
+   - The is also a "Recently Added" section at the bottom of the homepage displaying the three most recently added seeds.
+2. "As a user I want to be able to easily navigate through the site."
+   - The navbar has clear and descriptive words so that the user will be able to easily navigate through the website.
+   - All images on the "Home" page and "Seeds" page are also links that will direct the user to the page where they can learn to grow a seed.
+3. "As a user I want to be able to search for seeds that I would like to grow."
+   - On the "Seeds" page there is a search bar so users can easily seatch for a plant that they would like to grow.
+4. "As a user I want to be able to filter the seeds by categories so that I can easily find the types of seeds that I want."
+   - The is also a dropdown menu on the "Seeds" page which allows the user to filer the seeds by category for example "Herbs" or "Vegetables"
+5. "As a user I would like to be able to recieve emails containing information about gardening."
+   - In the footer there is a section where the user can add their email address. If the user avails of this they will recieve a weekly newsletter about gardening.
+
+### Unregistered Users
+1. "As an unregistered user I would like to be able to easily register for this website.
+   - If an unregistered user is on the website a "Register" option will appear in the navbar which will direct the user to a page so that they can register.
+2. "As an unregistered user I would like to be able to view all the seeds even when I am not registered."
+   - The "Seeds" page is available for all users not just those who have registered. Th user can navigate to this page by clicking on the "Seeds" option in the navbar.
+
+### Registered Users 
+1. "As a registered user I would like to be able to add my own seed to the collection of seeds displayed on the website so that I can share the knowledge I have with like minded people."
+   - An "Add Seed" page is available to all registered users. Users can reach this page by clicking on the "Add Seed" option in the navbar or by clicking on the floating button on their "Profile" page.
+2. "As a registered user I would like to be able to view any seeds that I have added easily and locate them in the same place."
+   - The users "Profile" page displays all the seeds that they have added to the website.
+3. "As a registered user I would like to be able to edit any seed that I have added in case I made a mistake or would like to change something." 
+   - There is an edit button under each of the users seeds on their "Profile" page. This button will direct them to the a page where they can edit the information for their seed. This edit page has the same layout as the page that they used to add the seed so the user will be familar with how to use it.
+4. "As a registered user I would like to be able to delete any seeds that I have added."
+   - There is a delete button under each of the users seeds on their "Profile" page. If the user clicks this button they are met with a box where they must confirm that they would like to delete the seed.
 
 #### Testing User Stories
 
