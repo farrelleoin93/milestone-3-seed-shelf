@@ -3,9 +3,11 @@
 {% block content %}
 
 <div class="site-container">
+    <div class="row">
+        <h3 class="col offset-l2 l8 center-align">{{ seed.seed_name }}</h3>
     {% if session.user|lower == seed.created_by|lower or session.user|lower == "admin" %}
-        <div class="row edit-buttons">
-            <div class="col offset-l10 l1">
+        <div class="edit-buttons">
+            <div class="col l1">
                 <a href="{{ url_for('edit_seed', seed_id=seed._id) }}" class="btn-floating waves-effect waves-light blue"><i class="fas fa-pencil-alt"></i></a>
             </div>
             <div class="col l1">
@@ -14,8 +16,8 @@
                 </button>
             </div>
         </div>
+    </div>
     {% endif %}
-    <h3 class="center-align">{{ seed.seed_name }}</h3>
     <div class="row">
         <div class="col s12 m6 grow-seed">
             <img src="{{ seed.seed_image }}" alt="Seed Image">

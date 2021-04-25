@@ -176,6 +176,11 @@ opacity: 1;
   margin-bottom: 0;
 }
 
+.edit-buttons button {
+    border: none;
+    background-color: #fff;
+}
+
 .choice {
     color: white;
     width: 70%;
