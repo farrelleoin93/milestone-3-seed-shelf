@@ -66,7 +66,7 @@ p {
   height: 80vh;
   width: 100%;
   color: white;
-  background-image: url(../images/hero.jpg);
+  background-image: url(../images/hero2.jpg);
   position: relative;
   background-position: center;
   background-repeat: no-repeat;
@@ -145,14 +145,16 @@ opacity: 1;
     height: 100%;
     width: 100%;
 	  background-color: rgba(0,0,0,0.3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .overlay-hero a {
   margin-top: 10px;
   border-radius: 10px;
+}
+
+.hero-content {
+  margin-left: 15vw;
+  margin-top: 10vh;
 }
 
 /* --------------- seeds.html --------------- */
@@ -315,15 +317,19 @@ footer {
 /* --------------- Media Queries --------------- */
 
 @media screen and (max-width: 1200px) {
-  .seed-details {
-    display: block;
-    font-size: 20px;
-    text-align: center;
-    font-family: "Roboto Mono", sans-serif;
-    color: black;
+  .overlay-card {
+    opacity: 1;
   }
 
   footer {
     margin-top: 40px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .hero-content {
+    margin-left: 10vw;
+    margin-top: 10vh;
+    margin-right: 10vw;
   }
 }

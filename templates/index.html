@@ -6,7 +6,7 @@
 <div class="row">
     <div class="hero-image">
         <div class="overlay-hero">
-            <div>
+            <div class="hero-content">
                 <h4>The Seed Shelf</h4>
                 <p>Learn how to grow your vegetables, fruit, herbs and plants.</p>
                 <p>Add your own seeds so you can teach others.</p>
@@ -38,9 +38,6 @@
                     {% else %}
                         <img class="seed-image" src="{{ recent.seed_image }}" alt="Seed Image">
                     {% endif %}
-                    <p class="seed-details card">
-                        {{ recent.seed_name }}
-                    </p>
                 </div>
                 </a>
             </div>
