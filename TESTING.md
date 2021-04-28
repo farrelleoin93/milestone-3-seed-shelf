@@ -37,9 +37,18 @@
 4. "As a registered user I would like to be able to delete any seeds that I have added."
    - There is a delete button under each of the users seeds on their "Profile" page. If the user clicks this button they are met with a box where they must confirm that they would like to delete the seed.
 
-#### Testing User Stories
+#### Testing Site Owner Goals
 
-1. 
+1.  "As the owner I want to inspire people to grow there own plants and discover the joys of gardening."
+   - I feel that this is achieved by supplying the users with a website that is clear, concise and easy to navigate. 
+2. "As the owner I want to provide people with a visually appealing website."
+   - This is achieved by the use of appealing imagery and and consistent styling thoughout the website. The minimal use of text also aids the visual appeal of the website.
+3. "As the owner I want to provide people with clear instructions on how to grow different types of plants."
+   - Although the instructions for growing the seeds on this website are provided by the users the layout of the grow seed page is clear and instructive. As admin the site owner has the ability to delete any seeds that they feel are not clear or in keeping with the style of the website.
+4. "As the owner I want to increase the volume of people that visit this website over time."
+   - Although this has not been widely tested yet most users that I got to try out the website said that they would use the website again and recommend it to friends. They said that the fact that new seeds will be consistantly added would encourage them to return to the website.
+5. "As the owner I want to be able to delete the content that users have added."
+   - The "admin" has the ablity to delete any seed that they wish. This ability is reserved for the admin and the creater of the seed only.
 
 ## <a name="bugs">Bugs</a>
 
