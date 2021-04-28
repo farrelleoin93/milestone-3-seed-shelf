@@ -59,6 +59,7 @@ You can see the live website [here]().
 2. As the owner I want to provide people with a visually appealing website.
 3. As the owner I want to provide people with clear instructions on how to grow different types of plants.
 4. As the owner I want to increase the volume of people that visit this website over time.
+5. As the owner I want to be able to delete the content that users have added.
 
 
 ## <a name="user-requirements">User Requirements and Expectations</a>
