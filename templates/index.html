@@ -31,13 +31,16 @@
         {% for recent in recents %}
             <div class="col s12 m4 flex">
                 <a href="{{ url_for('get_seed', seed_id=recent._id) }}">
-                <div class="card medium s4 seed-card hoverable">
+                <div class="card medium s4 hoverable">
                     <div class="overlay-card"><h4>{{ recent.seed_name }}</h4></div>
                     {% if recent.seed_image == "" %}
                         <img class="seed-image" src="static/images/plant-icon.png" alt="Seed Image">
                     {% else %}
                         <img class="seed-image" src="{{ recent.seed_image }}" alt="Seed Image">
                     {% endif %}
+                    <p class="seed-details card">
+                        {{ recent.seed_name }}
+                    </p>
                 </div>
                 </a>
             </div>

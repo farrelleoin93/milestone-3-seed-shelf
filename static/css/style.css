@@ -47,6 +47,10 @@ p {
     line-height: 2;
 }
 
+.seed-details {
+  display: none;
+}
+
 /* --------------- Navbar --------------- */
 
 .logo {
@@ -307,3 +311,18 @@ footer {
     display: flex;
   }
 
+/* --------------- Media Queries --------------- */
+
+@media screen and (max-width: 1200px) {
+  .seed-details {
+    display: block;
+    font-size: 20px;
+    text-align: center;
+    font-family: "Roboto Mono", sans-serif;
+    color: black;
+  }
+
+  footer {
+    margin-top: 40px;
+  }
+}
