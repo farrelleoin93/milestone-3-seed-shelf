@@ -169,6 +169,7 @@ Features that will be added in the future are:
 16. [Unsplash](https://unsplash.com/)
     - Unsplash was used to get images to use for the website.
 17. [Pexels](https://www.pexels.com/)
+    - Pexels was used to get images to use for the website.
 18. [Emailjs](https://www.emailjs.com/)
     - Emailjs was used to send the information added into the form to the owner of the website.
 19. [JSHint](https://jshint.com/)
@@ -272,7 +273,7 @@ echo web: python app.py > Procfile
 
 ### Media
 
-- The hero image was found on Pexels and was taken by René DeAnda.
+- All images used on this website were found on [Unsplash](https://unsplash.com/) and [Pexels](https://www.pexels.com/).
 
 ### Code 
 

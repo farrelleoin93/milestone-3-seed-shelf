@@ -34,7 +34,7 @@
                 <div class="card medium s4 hoverable">
                     <div class="overlay-card"><h4>{{ recent.seed_name }}</h4></div>
                     {% if recent.seed_image == "" %}
-                        <img class="seed-image" src="static/images/plant-icon.png" alt="Seed Image">
+                        <img class="seed-image" src="/static/images/default-image.jpg" alt="Seed Image">
                     {% else %}
                         <img class="seed-image" src="{{ recent.seed_image }}" alt="Seed Image">
                     {% endif %}

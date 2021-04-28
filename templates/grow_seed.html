@@ -20,7 +20,11 @@
     {% endif %}
     <div class="row">
         <div class="col s12 m6 grow-seed">
-            <img src="{{ seed.seed_image }}" alt="Seed Image">
+            {% if seed.seed_image == "" %}
+                <img src="/static/images/default-image.jpg" alt="Seed Image">
+            {% else %}
+                <img src="{{ seed.seed_image }}" alt="Seed Image">
+            {% endif %}
         </div>
         <div class="col s12 m6">
             <p class="seed-description">{{ seed.seed_description }}</p>
