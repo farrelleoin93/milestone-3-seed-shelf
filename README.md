@@ -191,6 +191,72 @@ The details of testing can be found [here](TESTING.md)
 ## <a name="deployment">Deployment</a>
 
 ---
+## Deployment
+
+The master branch of this repository is the most up to date version and has been used for the deployed version of the site.
+
+
+### How to clone the project
+
+To clone this project from its [GitHub repository](https://github.com/farrelleoin93/milestone-3-seed-shelf):
+
+1. From the repository, click "Code"
+2. In the "Clone >> HTTPS" section, copy the clone URL for the repository
+3. Type `git clone` into your teminal and paste the URL you copied.
+
+```
+git clone <paste url>.
+```
+
+```
+import os
+
+os.environ.setdefault("IP", "0.0.0.0")
+os.environ.setdefault("PORT", "5000")
+os.environ.setdefault("SECRET_KEY", "SECRET KEY")
+os.environ.setdefault("MONGO_URI", "MONGO URI")
+os.environ.setdefault("MONGO_DBNAME", "MONGO DBNAME")
+
+```
+8. **List env.py in your .gitignore file so that your variables are not pushed publicly.**
+9. The app can now be run locally using
+```
+python3 app.py
+```
+
+
+### How to deploy to Heroku
+
+To deploy the app to Heroku from its [GitHub repository](https://github.com/farrelleoin93/milestone-3-seed-shelf), I took the following steps:
+
+1. Create "requirements.txt" and "Procfile" using the following commands:
+
+```
+pip3 freeze --local > requirements.txt
+echo web: python app.py > Procfile
+```
+
+2. "Push" these files to GitHub.
+3. "Log In" to [Heroku](https://id.heroku.com/login).
+4. Select "Create new app" from the dropdown in the Heroku dashboard.
+5. Choose a unique name ('the-seed-shelf') for the app pick whatever location is closest to you.
+6. Click the "Deploy" tab and under "Deployment method" pick GitHub.
+7. In "Connect to GitHub" enter your GitHub repository details and click "Connect".
+8. Go to the "Settings" tab and under "Config Vars" select "Reveal Config Vars".
+9. Enter the following keys and values, these must match the keys and values in your env.py file:
+
+|**Key**|**Value**|
+|:-----|:-----|
+|IP|`0.0.0.0`|
+|PORT|`5000`|
+|SECRET_KEY|`Secret Key`|
+|MONGO_URI|`Mongo URI`|
+|MONGO_DBNAME|`Database Name`|
+
+10. Go to the "Deploy" tab again and under "Automatic deploys" select "Enable Automatic Deploys".
+11. Under "Manual deploy", select "master" and click "Deploy Branch".
+12. On the top right of the page click "Open app".
+
 
 
 ## <a name="credits">Credits</a>
