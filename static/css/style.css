@@ -158,6 +158,7 @@ opacity: 1;
 /* --------------- seeds.html --------------- */
 .search-bar {
   border-radius: 70px;
+  background-color: #f7f5f5;
 }
 
 .search-button-container {
