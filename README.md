@@ -168,9 +168,10 @@ Features that will be added in the future are:
     - Am I Responsive was used to see how the website looked on different devices.
 16. [Unsplash](https://unsplash.com/)
     - Unsplash was used to get images to use for the website.
-17. [Emailjs](https://www.emailjs.com/)
+17. [Pexels](https://www.pexels.com/)
+18. [Emailjs](https://www.emailjs.com/)
     - Emailjs was used to send the information added into the form to the owner of the website.
-18. [JSHint](https://jshint.com/)
+19. [JSHint](https://jshint.com/)
     - JSHint was used to test the JavaScript code.
 
 
@@ -271,7 +272,7 @@ echo web: python app.py > Procfile
 
 ### Media
 
-- 
+- The hero image was found on Pexels and was taken by René DeAnda.
 
 ### Code 
 
