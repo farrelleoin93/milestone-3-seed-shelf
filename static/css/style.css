@@ -152,6 +152,10 @@ opacity: 1;
   margin-top: 10vh;
 }
 
+.profile-heading {
+  margin-top: 30px;
+}
+
 /* --------------- seeds.html --------------- */
 .search-bar {
   border-radius: 70px;

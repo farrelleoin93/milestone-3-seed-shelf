@@ -17,7 +17,7 @@
 </div>
 
 <div class="container">
-    <h4 class="center-align">Get Growing</h4>
+    <h4 class="center-align profile-heading">Get Growing</h4>
     <div class="carousel carousel-slider">
     {% for seed in seeds %}
         <a class="carousel-item" href="{{ url_for('get_seed', seed_id=seed._id) }}"><img class="carousel-images" src="{{ seed.seed_image }}"></a>
@@ -26,7 +26,7 @@
 </div>
 
 <div class="site-container">
-    <h4 class="center-align">Most Recent Seeds</h4>
+    <h4 class="center-align profile-heading">Most Recent Seeds</h4>
     <div class="row">
         {% for recent in recents %}
             <div class="col s12 m4 flex">
