@@ -2,9 +2,12 @@
 {% block title %}The Seed Shelf - Seeds{% endblock %}
 {% block content %}
     <div class="site-container">
+        <!-- Heading -->
         <h3 class="center-align">Seeds</h3>
 
+        <!-- Search Bar -->
         <div class="row card-panel search-bar">
+            <!-- Keyword search input field - Code was taken from the course content, Searching Lesson of Mini Project -->
             <form action="{{ url_for('search') }}" method="post" class="col s12 m6">
                 <div class="row search-margin valign-wrapper center-align">
                     <div class="input-field col s12">
@@ -14,6 +17,7 @@
                     </div>
                 </div>
             </form>
+            <!-- Dropdown to filter results by seed category - Code found on Materialize https://materializecss.com/select.html -->
             <form action="{{ url_for('filter') }}" method="post" class="col s12 m6">
                 <div class="input-field col s12">
                     <select name="category_name" id="category_name" onchange="this.form.submit()">
@@ -33,14 +37,18 @@
         </div>
 
         <div class="row">
+            <!-- Display all seeds in Database -->
             {% for seed in seeds %}
             <div class="col s12 m4 l3 flex">
                 <a href="{{ url_for('get_seed', seed_id=seed._id) }}">
                 <div class="card small s4 hoverable">
+                    <!-- Image overlay showing the name of the seed -->
                     <div class="overlay-card"><h4>{{ seed.seed_name }}</h4></div>
                     {% if seed.seed_image == "" %}
+                    <!-- Default image to be used if no image was added by the user -->
                         <img class="seed-image" src="/static/images/default-image.jpg" alt="Seed Image">
                     {% else %}
+                    <!-- Image added by user -->
                         <img class="seed-image" src="{{ seed.seed_image }}" alt="Seed Image">
                     {% endif %}
                 </div>
