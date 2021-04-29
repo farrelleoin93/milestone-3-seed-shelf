@@ -11,12 +11,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
         type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+    <!-- Page Titles -->
     <title>{% block title %}{% endblock %}</title>
 </head>
 
 <body>
     <header>
-        <!-- Top Navbar -->
+        <!-- Top Navbar - Code from Code Institute mini project -->
         <nav class="nav-extended light-green">
             <div class="nav-wrapper">
                 <a href="{{ url_for('home') }}" class="logo">The Seed Shelf</a>
@@ -24,10 +25,12 @@
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('home') }}">Home</a></li>
                     <li><a href="{{ url_for('seeds') }}">Seeds</a></li>
+                    <!-- If user is logged in show -->
                     {% if session.user %}
                         <li><a href="{{ url_for('add_seed') }}">Add Seed</a></li>
                         <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                         <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                        <!-- If user is not logged in show -->
                     {% else %}
                         <li><a href="{{ url_for('login') }}">Log In</a></li>
                         <li><a href="{{ url_for('register') }}">Register</a></li>
@@ -36,15 +39,17 @@
             </div>
         </nav>
         
-        <!-- Mobile sidenav -->
+        <!-- Mobile sidenav - Code from Code Institute mini project -->
         <ul class="sidenav" id="mobile-demo">
             <li><h4 class="center-align light-blue-text text-darken-4">The Seed Shelf</h4></li>
             <li><a href="{{ url_for('home') }}">Home</a></li>
             <li><a href="{{ url_for('seeds') }}">Seeds</a></li>
+            <!-- If user is logged in show -->
             {% if session.user %}
                 <li><a href="{{ url_for('add_seed') }}">Add Seed</a></li>
                 <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                 <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                <!-- If user is not logged in show -->
             {% else %}
                 <li><a href="{{ url_for('login') }}">Log In</a></li>
                 <li><a href="{{ url_for('register') }}">Register</a></li>
@@ -52,13 +57,16 @@
         </ul>
     </header>
 
+    <!-- Block used for content on each template -->
     <main>
         {% block content %}
         {% endblock %}
     </main>
 
+    <!-- Footer -->
     <footer class="container-fluid light-green">
         <div class="row footer">
+            <!-- Newsletter sign up -->
             <div class="col s12 m6 footer-items">
                 <p>Sign up for our weekly newsletter</p>
                 <form id="contactForm" onsubmit="return sendMail(this);">
@@ -66,6 +74,7 @@
                     <button type="submit" id="send-button"><i class="far fa-paper-plane"></i></button>    
                 </form>
             </div>
+            <!-- Social media links -->
             <div class="col s12 m6 social-links">
                 <p class="footer-items">© Copyright - The Seed Shelf</p>
                 <ul class="list-inline">
@@ -86,7 +95,9 @@
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <!-- Emailjs -->
     <script>
         (function () {
             emailjs.init("user_bb4xdCXZSX4M89EM712oR");
@@ -100,11 +111,12 @@
     {% block scripts %}
     {% endblock %}
 
+    <!-- Inline scripts to display materialize toasts for flashed messages -->
     <script>
-        // Flash messages 
         {% with messages = get_flashed_messages() %}
             {% if messages %}
                 {% for message in messages %}
+                // Code for toasts was found at https://materializecss.com/toasts.html
                     M.toast({html: "{{ message }}", classes: 'rounded'})
                 {% endfor %}
             {% endif %}
