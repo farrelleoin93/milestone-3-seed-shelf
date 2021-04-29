@@ -22,13 +22,15 @@
                 {% for seed in seeds if session.user|lower == seed.created_by|lower %}
                     <div class="col s12 m4">
                         <div class="card">
-                            <div class="card-image">
-                                {% if seed.seed_image == "" %}
+                            <a href="{{ url_for('get_seed', seed_id=seed._id) }}">
+                                <div class="card-image">
+                                    {% if seed.seed_image == "" %}
                                     <img class="profile-seed-image" src="/static/images/default-image.jpg" alt="Seed Image">
-                                {% else %}
+                                    {% else %}
                                     <img class="profile-seed-image" src="{{ seed.seed_image }}" alt="Seed Image">
-                                {% endif %}
-                            </div>
+                                    {% endif %}
+                                </div>
+                            </a>
                             <div class="profile-card">
                                 <p>
                                     <strong>Plant:</strong> {{ seed.seed_name }}
