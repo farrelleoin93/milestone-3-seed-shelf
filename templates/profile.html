@@ -3,15 +3,18 @@
 {% block content %}
 
 <div class="container">
+        <!-- Message to user -->
         <div class="center-align profile-heading">
                 <p>Hey <strong>{{username}}</strong>, you can keep track of all your seeds here. Feel free to edit or delete your
                     current
                     seeds or add even more.</p>
         </div>
         <div class="row profile">
+            <!-- Heading -->
             <div class="col s8 offset-s2">
                 <h3 class="center-align">My Seeds</h3>
             </div>
+            <!-- Add seed button -->
             <div class="col s2">
                 <a href="{{ url_for('add_seed') }}" class="btn-floating btn-large waves-effect waves-light red"><i
                         class="fas fa-plus-circle"></i></a>
@@ -25,12 +28,15 @@
                             <a href="{{ url_for('get_seed', seed_id=seed._id) }}">
                                 <div class="card-image">
                                     {% if seed.seed_image == "" %}
+                                    <!-- Default image to be used if no image was added by the user -->
                                     <img class="profile-seed-image" src="/static/images/default-image.jpg" alt="Seed Image">
                                     {% else %}
+                                    <!-- Image added by user -->
                                     <img class="profile-seed-image" src="{{ seed.seed_image }}" alt="Seed Image">
                                     {% endif %}
                                 </div>
                             </a>
+                            <!-- Seed details card -->
                             <div class="profile-card">
                                 <p>
                                     <strong>Plant:</strong> {{ seed.seed_name }}
@@ -40,6 +46,7 @@
                                     <strong>Created By:</strong> {{ seed.created_by }}
                                 </p>
                             </div>
+                            <!-- Buttons -->
                             <div class="profile-buttons">
                                 <a href="{{ url_for('edit_seed', seed_id=seed._id) }}" class="btn-floating waves-effect waves-light blue"><i class="fas fa-pencil-alt"></i></a>
                                 <button>
@@ -51,6 +58,7 @@
                 {% endfor %}
             </div>
         {% else %}
+        <!-- Message for user if they have not added any seeds -->
         <div class="center-align row">
             <div>
                 <p>You have no added any seeds yet!</p>
