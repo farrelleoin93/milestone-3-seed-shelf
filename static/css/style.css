@@ -305,7 +305,7 @@ footer {
   
   footer p {
     margin-top: 10px;
-    margin-bottom: 0;
+    margin-bottom: 7px;
     color: #fff;
   }
   
@@ -319,6 +319,10 @@ footer {
 @media screen and (max-width: 1200px) {
   .overlay-card {
     opacity: 1;
+  }
+
+  .footer-items form {
+    width: 80%;
   }
 }
 
