@@ -4,8 +4,10 @@
 {% block content %}
 
 <div class="row">
+    <!-- Hero Image -->
     <div class="hero-image">
         <div class="overlay-hero">
+            <!-- Website description on hero image -->
             <div class="hero-content">
                 <h4>The Seed Shelf</h4>
                 <p>Learn how to grow your vegetables, fruit, herbs and plants.</p>
@@ -17,6 +19,7 @@
 </div>
 
 <div class="container">
+    <!-- Seed Carousel - Code for the carousel was found at https://materializecss.com/carousel.html -->
     <h4 class="center-align profile-heading">Get Growing</h4>
     <div class="carousel carousel-slider">
     {% for seed in seeds %}
@@ -26,16 +29,20 @@
 </div>
 
 <div class="site-container">
-    <h4 class="center-align profile-heading">Most Recent Seeds</h4>
+    <!-- The three most recently added seeds -->
+    <h4 class="center-align profile-heading">Recently Added</h4>
     <div class="row">
         {% for recent in recents %}
             <div class="col s12 m4 flex">
                 <a href="{{ url_for('get_seed', seed_id=recent._id) }}">
                 <div class="card medium s4 hoverable">
+                    <!-- Image overlay showing the name of the seed -->
                     <div class="overlay-card"><h4>{{ recent.seed_name }}</h4></div>
                     {% if recent.seed_image == "" %}
+                    <!-- Default image to be used if no image was added by the user -->
                         <img class="seed-image" src="/static/images/default-image.jpg" alt="Seed Image">
                     {% else %}
+                    <!-- Image added by user -->
                         <img class="seed-image" src="{{ recent.seed_image }}" alt="Seed Image">
                     {% endif %}
                 </div>
