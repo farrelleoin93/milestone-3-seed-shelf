@@ -221,6 +221,10 @@ opacity: 1;
   margin: 30px 0;
 }
 
+.profile-card {
+  padding: 6px;
+}
+
 .profile h2 {
   margin-top: 0;
 }
