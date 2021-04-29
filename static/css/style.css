@@ -43,12 +43,8 @@ p {
     text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
 }
 
-.flashed h4 {
-    line-height: 2;
-}
-
-.seed-details {
-  display: none;
+.modal p {
+  margin-bottom: 10px;
 }
 
 /* --------------- Navbar --------------- */
