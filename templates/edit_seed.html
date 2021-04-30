@@ -4,19 +4,23 @@
     <div class="container">
         <h3 class="center-align">Edit Seed</h3>
         <div class="row">
-            <form class="col s12" method="POST" action="{{ url_for('add_seed') }}">
+            <form class="col s12" method="POST" action="{{ url_for('edit_seed', seed_id=seed._id) }}">
                 <div class="row">
                     <!-- Seed Name -->
                     <div class="input-field col s6">
-                        <input placeholder="Seed Name" id="seed_name" name="seed_name" type="text" class="validate">
+                        <input value="{{ seed.seed_name }}" placeholder="Seed Name" id="seed_name" name="seed_name" type="text" class="validate">
                         <label for="seed_name">Seed Name</label>
                     </div>
                     <!-- Seed Category -->
                     <div class="input-field col s6">
                         <select id="category_name" name="category_name" class="validate" required>
-                            <option value="" disabled selected>Choose a category</option>
+                            <option value="" disabled>Choose a category</option>
                             {% for category in categories %}
-                                <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                                {% if category.category_name == seed.category_name %}
+                                    <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                                {% else %}
+                                    <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                                {% endif %}
                             {% endfor %}
                         </select>
                         <label for="category_name">Seed Category</label>
@@ -25,19 +29,23 @@
                 <div class="row">
                     <!-- Seed Description -->
                     <div class="input-field col s6">
-                        <textarea id="seed_description" name="seed_description" class="materialize-textarea"></textarea>
+                        <textarea id="seed_description" name="seed_description" class="materialize-textarea">
+                            {{- seed.seed_description -}}
+                        </textarea>
                         <label for="seed_description">Description</label>
                     </div>
                     <!-- Seed Image URL -->
                     <div class="input-field col s6">
-                        <input id="seed_image" name="seed_image" type="text" class="validate">
+                        <input value="{{ seed.seed_image }}" id="seed_image" name="seed_image" type="text" class="validate">
                         <label for="seed_image">Image URL</label>
                     </div>
                 </div>
                 <!-- Seed Sowing Instructions -->
                 <div class="row">
                     <div class="input-field col s12">
-                        <textarea id="sowing_instructions" name="sowing_instructions" class="materialize-textarea"></textarea>
+                        <textarea id="sowing_instructions" name="sowing_instructions" class="materialize-textarea">
+                            {{- seed.sowing_instructions -}}
+                        </textarea>
                         <label for="sowing_instructions">Sowing Instructions</label>
                         <span class="helper-text">Please enter each instruction on a new line.</span>
                     </div>
@@ -45,7 +53,9 @@
                 <!-- Seed Growing Instructions -->
                 <div class="row">
                     <div class="input-field col s12">
-                        <textarea id="growing_instructions" name="growing_instructions" class="materialize-textarea"></textarea>
+                        <textarea id="growing_instructions" name="growing_instructions" class="materialize-textarea">
+                            {{- seed.growing_instructions -}}
+                        </textarea>
                         <label for="growing_instructions">Growing Instructions</label>
                         <span class="helper-text">Please enter each instruction on a new line.</span>
                     </div>
@@ -53,7 +63,9 @@
                 <!-- Seed Harvesting Instructions -->
                 <div class="row">
                     <div class="input-field col s12">
-                        <textarea id="harvesting_instructions" name="harvesting_instructions" class="materialize-textarea"></textarea>
+                        <textarea id="harvesting_instructions" name="harvesting_instructions" class="materialize-textarea">
+                            {{- seed.harvesting_instructions -}}
+                        </textarea>
                         <label for="harvesting_instructions">Harvesting Instructions</label>
                         <span class="helper-text">Please enter each instruction on a new line.</span>
                     </div>
