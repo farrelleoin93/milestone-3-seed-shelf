@@ -178,8 +178,10 @@ opacity: 1;
 
 /* --------------- grow_seed.html --------------- */
 .edit-buttons{
-  margin-top: 10px;
+  margin-top: 33px;
   margin-bottom: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .edit-buttons button {
@@ -319,10 +321,14 @@ footer {
   }
 
 /* --------------- Media Queries --------------- */
-
-@media screen and (max-width: 1200px) {
+/* -------- for devices smaller than desktop and iPad pro --------- */
+@media screen and (max-width: 1000px) {
   .container {
     width: 90%;
+  }
+
+  .edit-buttons {
+    margin-top: 0;
   }
 
   .overlay-card {
@@ -339,5 +345,9 @@ footer {
     margin-left: 10vw;
     margin-top: 10vh;
     margin-right: 10vw;
+  }
+
+  .seed-description {
+    margin-top: 20px;
   }
 }

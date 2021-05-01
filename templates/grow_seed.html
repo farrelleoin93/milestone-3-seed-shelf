@@ -4,13 +4,13 @@
 
 <div class="site-container">
     <div class="row">
-        <h3 class="col offset-l2 l8 center-align">{{ seed.seed_name }}</h3>
+        <h3 class="col s12 offset-l2 l8 center-align">{{ seed.seed_name }}</h3>
     {% if session.user|lower == seed.created_by|lower or session.user|lower == "admin" %}
-        <div class="edit-buttons">
-            <div class="col l1">
+        <div class="col s12 l2 edit-buttons">
+            <div>
                 <a href="{{ url_for('edit_seed', seed_id=seed._id) }}" class="btn-floating waves-effect waves-light blue"><i class="fas fa-pencil-alt"></i></a>
             </div>
-            <div class="col l1">
+            <div>
                 <button>
                     <a data-target="modal1" class="btn-floating modal-trigger waves-effect waves-light red"><i class="fas fa-trash"></i></a>
                 </button>
