@@ -237,6 +237,8 @@ def filter():
         seeds = list(mongo.db.seeds.find({"category_name": "Fruit"}))
     elif category_name == "Flowers":
         seeds = list(mongo.db.seeds.find({"category_name": "Flowers"}))
+    elif category_name == "All":
+        seeds = mongo.db.seeds.find()
 
     return render_template(
                             "seeds.html",
