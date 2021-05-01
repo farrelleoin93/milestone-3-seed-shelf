@@ -53,15 +53,17 @@
                         {% endfor %}
                     </ul>
                 </div>
-                <div id="harvesting-instructions">
-                    <h4>Harvesting Instructions</h4>
-                    <hr>
-                    <ul>
-                        {% for instructions in seed.harvesting_instructions.splitlines() %}
-                        <li><i class="fas fa-carrot"></i> {{ instructions }}</li>
-                        {% endfor %}
-                    </ul>
-                </div>
+                {% if seed.harvesting_instructions != "" %}
+                    <div id="harvesting-instructions">
+                        <h4>Harvesting Instructions</h4>
+                        <hr>
+                        <ul>
+                            {% for instructions in seed.harvesting_instructions.splitlines() %}
+                            <li><i class="fas fa-carrot"></i> {{ instructions }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
             </div>
         </div>
     </div>
