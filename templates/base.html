@@ -23,17 +23,17 @@
                 <a href="{{ url_for('home') }}" class="logo">The Seed Shelf</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="{{ url_for('home') }}">Home</a></li>
-                    <li><a href="{{ url_for('seeds') }}">Seeds</a></li>
+                    <li class="{% block nav_home %}{% endblock %}"><a href="{{ url_for('home') }}">Home</a></li>
+                    <li class="{% block nav_seeds %}{% endblock %}"><a href="{{ url_for('seeds') }}">Seeds</a></li>
                     <!-- If user is logged in show -->
                     {% if session.user %}
-                        <li><a href="{{ url_for('add_seed') }}">Add Seed</a></li>
-                        <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                        <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                        <li class="{% block nav_add %}{% endblock %}"><a href="{{ url_for('add_seed') }}">Add Seed</a></li>
+                        <li class="{% block nav_profile %}{% endblock %}"><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+                        <li class="{% block nav_logout %}{% endblock %}"><a href="{{ url_for('logout') }}">Log Out</a></li>
                         <!-- If user is not logged in show -->
                     {% else %}
-                        <li><a href="{{ url_for('login') }}">Log In</a></li>
-                        <li><a href="{{ url_for('register') }}">Register</a></li>
+                        <li class="{% block nav_login %}{% endblock %}"><a href="{{ url_for('login') }}">Log In</a></li>
+                        <li class="{% block nav_register %}{% endblock %}"><a href="{{ url_for('register') }}">Register</a></li>
                     {% endif %}
                 </ul>
             </div>
@@ -42,18 +42,18 @@
         <!-- Mobile sidenav - Code from Code Institute mini project -->
         <ul class="sidenav" id="mobile-demo">
             <li><h4 class="center-align light-blue-text text-darken-4">The Seed Shelf</h4></li>
-            <li><a href="{{ url_for('home') }}">Home</a></li>
-            <li><a href="{{ url_for('seeds') }}">Seeds</a></li>
-            <!-- If user is logged in show -->
-            {% if session.user %}
-                <li><a href="{{ url_for('add_seed') }}">Add Seed</a></li>
-                <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                <li><a href="{{ url_for('logout') }}">Log Out</a></li>
-                <!-- If user is not logged in show -->
-            {% else %}
-                <li><a href="{{ url_for('login') }}">Log In</a></li>
-                <li><a href="{{ url_for('register') }}">Register</a></li>
-            {% endif %}
+            <li class="{% block nav_home_mob %}{% endblock %}"><a href="{{ url_for('home') }}">Home</a></li>
+                    <li class="{% block nav_seeds_mob %}{% endblock %}"><a href="{{ url_for('seeds') }}">Seeds</a></li>
+                    <!-- If user is logged in show -->
+                    {% if session.user %}
+                        <li class="{% block nav_add_mob %}{% endblock %}"><a href="{{ url_for('add_seed') }}">Add Seed</a></li>
+                        <li class="{% block nav_profile_mob %}{% endblock %}"><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+                        <li class="{% block nav_logout_mob %}{% endblock %}"><a href="{{ url_for('logout') }}">Log Out</a></li>
+                        <!-- If user is not logged in show -->
+                    {% else %}
+                        <li class="{% block nav_login_mob %}{% endblock %}"><a href="{{ url_for('login') }}">Log In</a></li>
+                        <li class="{% block nav_register_mob %}{% endblock %}"><a href="{{ url_for('register') }}">Register</a></li>
+                    {% endif %}
         </ul>
     </header>
 
