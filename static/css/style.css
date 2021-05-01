@@ -57,6 +57,10 @@ p {
   padding-left: 20px;
 }
 
+header {
+  font-family: "Roboto Mono", sans-serif;
+}
+
 /* --------------- Images --------------- */
 .hero-image {
   height: 80vh;
