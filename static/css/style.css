@@ -322,13 +322,9 @@ footer {
 
 /* --------------- Media Queries --------------- */
 /* -------- for devices smaller than desktop and iPad pro --------- */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
   .container {
     width: 90%;
-  }
-
-  .edit-buttons {
-    margin-top: 0;
   }
 
   .overlay-card {
@@ -337,6 +333,12 @@ footer {
 
   .footer-items form {
     width: 80%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .edit-buttons {
+    margin-top: 0;
   }
 }
 
