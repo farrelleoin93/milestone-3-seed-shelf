@@ -331,6 +331,10 @@ footer {
     opacity: 1;
   }
 
+  .fixed-action-btn {
+    margin-bottom: 100px;
+  }
+
   .footer-items form {
     width: 80%;
   }
@@ -340,6 +344,7 @@ footer {
   .edit-buttons {
     margin-top: 0;
   }
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -347,6 +352,10 @@ footer {
     margin-left: 10vw;
     margin-top: 10vh;
     margin-right: 10vw;
+  }
+
+  .fixed-action-btn {
+    margin-bottom: 0;
   }
 
   .seed-description {
