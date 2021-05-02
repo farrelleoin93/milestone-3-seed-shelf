@@ -40,26 +40,32 @@
             </form>
         </div>
 
-        <div class="row">
-            <!-- Display all seeds in Database -->
-            {% for seed in seeds %}
-            <div class="col s12 m4 l3 flex">
-                <a href="{{ url_for('get_seed', seed_id=seed._id) }}">
-                <div class="card small s4 hoverable">
-                    <!-- Image overlay showing the name of the seed -->
-                    <div class="overlay-card"><h4>{{ seed.seed_name }}</h4></div>
-                    {% if seed.seed_image == "" %}
-                    <!-- Default image to be used if no image was added by the user -->
-                        <img class="seed-image" src="/static/images/default-image.jpg" alt="Seed Image">
-                    {% else %}
-                    <!-- Image added by user -->
-                        <img class="seed-image" src="{{ seed.seed_image }}" alt="Seed Image">
-                    {% endif %}
+        {% if seeds|length > 0 %}
+            <div class="row">
+                <!-- Display seeds in Database -->
+                {% for seed in seeds %}
+                <div class="col s12 m4 l3 flex">
+                    <a href="{{ url_for('get_seed', seed_id=seed._id) }}">
+                    <div class="card small s4 hoverable">
+                        <!-- Image overlay showing the name of the seed -->
+                        <div class="overlay-card"><h4>{{ seed.seed_name }}</h4></div>
+                        {% if seed.seed_image == "" %}
+                        <!-- Default image to be used if no image was added by the user -->
+                            <img class="seed-image" src="/static/images/default-image.jpg" alt="Seed Image">
+                        {% else %}
+                        <!-- Image added by user -->
+                            <img class="seed-image" src="{{ seed.seed_image }}" alt="Seed Image">
+                        {% endif %}
+                    </div>
+                    </a>
                 </div>
-                </a>
+                {% endfor %}
             </div>
-            {% endfor %}
-        </div>
+        {% else %}
+            <div class="row">
+                <h4 class="no-results">No results were found <i class="fas fa-frown"></i></h4>
+            </div>
+        {% endif %}
     </div>    
 
 {% endblock %}

@@ -180,6 +180,10 @@ opacity: 1;
   margin-bottom: 0;
 }
 
+.no-results {
+  text-align: center;
+}
+
 /* --------------- grow_seed.html --------------- */
 .edit-buttons{
   margin-top: 33px;
