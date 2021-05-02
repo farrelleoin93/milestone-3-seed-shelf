@@ -50,6 +50,33 @@
 5. "As the owner I want to be able to delete the content that users have added."
    - The "admin" has the ablity to delete any seed that they wish. This ability is reserved for the admin and the creater of the seed only.
 
+### Manual testing
+
+The following tests have been carried out without any issues:
+
+**Navigation bar**
+
+Mobile:
+- Navbar is fixed to the top of the viewport when scrolling down.
+- Tapping/clicking the logo takes users to the Home page.
+- When the hamburger menu icon is clicked/tapped all the menu options that are available to the user are displayed in the Sidenav.
+- The correct menu options appear depending on the user's session status:
+- Only the correct menu options are displayed depending on whether the user is logged in or not:
+  - **Not logged in**: Home, Seeds, Log In, Register
+  - **Logged in**: Home, Seeds, Add Seed, Profile, Log Out
+- The active page is indicated.
+- Tapping/clicked each link directs the user to the relevant page.
+
+On screen widths greater than 992px:
+- A standard navigation bar replaces the hamburger menu.
+- When the mouse hovers over an navigation option a shadow appears.
+
+**Footer**
+
+- The footer remains stuck to the bottom of the page even when all content is removed.
+- The newsletter sends to users email to the site owners email so that they can be added to a list recieve a weekly newsletter.
+- Each social media link opens the relevant external page in a new window.
+
 ## <a name="bugs">Bugs</a>
 
 ---
