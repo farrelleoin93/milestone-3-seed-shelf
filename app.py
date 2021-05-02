@@ -29,7 +29,7 @@ def home():
 
 @app.route("/seeds")
 def seeds():
-    seeds = list(mongo.db.seeds.find())
+    seeds = list(mongo.db.seeds.find().sort('_id', -1))
     categories = mongo.db.categories.find().sort(
         "category_name", 1)
 
@@ -220,7 +220,7 @@ def get_seed(seed_id):
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
-    seeds = list(mongo.db.seeds.find({"$text": {"$search": query}}))
+    seeds = list(mongo.db.seeds.find({"$text": {"$search": query}}).sort())
     return render_template("seeds.html", seeds=seeds)
 
 
