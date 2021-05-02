@@ -65,6 +65,25 @@ nav ul a {
   font-size: 17px;
 }
 
+/* --------------- Cards --------------- */
+.overlay-card {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.5);
+  color: #f1f1f1;
+  transition: 0.6s ease-in-out;
+  opacity: 0;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay-card h4 {
+  text-align: center;
+}
+
 /* --------------- Images --------------- */
 .hero-image {
   height: 80vh;
@@ -112,20 +131,6 @@ nav ul a {
 .profile-seed-image {
   height: 300px;
   object-fit: cover;
-}
-
-.overlay-card {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0,0,0,0.5);
-  color: #f1f1f1;
-  transition: 0.6s ease-in-out;
-  opacity: 0;
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .col:hover .overlay-card {
