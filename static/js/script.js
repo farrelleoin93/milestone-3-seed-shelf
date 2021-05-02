@@ -6,7 +6,14 @@ $(document).ready(function () {
         fullWidth: true,
         dragged: true,
         indicators: true,
-        numVisible: 5});
+        numVisible: 5
+    });
+    // Code for autoplay function was found here https://www.youtube.com/watch?v=I-roimeoeXM
+    autoplay();
+    function autoplay() {
+        $('.carousel').carousel('next');
+        setTimeout(autoplay,4000)
+    }
 
 
 /* This code was taken from Materialize Form Validation lesson by Code Institute, 
