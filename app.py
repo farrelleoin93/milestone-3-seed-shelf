@@ -29,7 +29,7 @@ def home():
 
 @app.route("/seeds")
 def seeds():
-    seeds = mongo.db.seeds.find()
+    seeds = list(mongo.db.seeds.find())
     categories = mongo.db.categories.find().sort(
         "category_name", 1)
 
@@ -238,7 +238,7 @@ def filter():
     elif category_name == "Flowers":
         seeds = list(mongo.db.seeds.find({"category_name": "Flowers"}))
     elif category_name == "All":
-        seeds = mongo.db.seeds.find()
+        seeds = list(mongo.db.seeds.find())
 
     return render_template(
                             "seeds.html",

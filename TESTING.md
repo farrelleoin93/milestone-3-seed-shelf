@@ -62,3 +62,4 @@
 4. fix splitlines bug
 4. fix registration but by changing from render template to redirect
 6. vegetables bug - remove unnecessary variable
+7. object of type 'Cursor' has no len() convert it to list
