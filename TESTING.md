@@ -174,10 +174,15 @@ Search and Filter:
 
 ### Bugs fixed while building the website:
 
-1. cards displaying 3 times, change location of for loop
-2. deleting session user then logging out crashed the site.
-3. change created by part of submit in edit so original creater remains creater
-4. fix splitlines bug
-4. fix registration but by changing from render template to redirect
-6. vegetables bug - remove unnecessary variable
-7. object of type 'Cursor' has no len() convert it to list
+1. **Seed cards displaying three times.** 
+    - To fix this bug I simply changed the location of the for loop.
+2. **Deleting session user then logging out crashes the site.**
+    - To fix this I added an if statement to the logout function checking if the user was in session. If the user is not in session they are redirected to the home page and a toast message is displayed stating that they are already logged out.
+3. **When the admin edited another users seed the admin then appeared as the creater of the seed.**
+    - To solve this issue I changed the "created by" part of the edit function so that the original creater remained the seed creater.
+4. **All seed instructions were being added to the database in an array containing one string, this caused issues when displaying the instructions on the seed view page**
+    - To fix this issue the instructions information needed to be sent to the database as a string not an array. I then added the splitlines() to the instructions part of the seed view page. I recieved help and advice on this issue from Stephen, one of the Code Institute's tutors.
+6. **When the vegetable option of the dropdown filter was selected twice it crashed the site** 
+    - To fix this bug I removed the seeds=seeds that I was passing into the filter url_for as the filter view did not take a parameter. I was helped with this issue by Michael, one of the Code Institute's tutors.
+7. **When all option in dropdown select on the seeds page was picked I got the error: "object of type 'Cursor' has no len() convert it to list"**
+    - This issue was fixed by adding the list() constructor to "All" in the filter function. I recieved help on how to rectify this issue by browsing through slack and reading about how other people solved similar issues.
