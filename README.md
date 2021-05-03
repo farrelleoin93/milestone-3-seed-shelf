@@ -277,7 +277,10 @@ echo web: python app.py > Procfile
 
 ### Code 
 
-1. 
+1. The code for the carousel is from Materialize and can be found [here](https://materializecss.com/carousel.html).
+2. The code for the autoplay function for the carousel was found on [here](https://www.youtube.com/watch?v=I-roimeoeXM).
+3.  
+
 ### Content
 
 - basil - https://www.healthline.com/nutrition/basil
