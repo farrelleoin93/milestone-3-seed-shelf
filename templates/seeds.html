@@ -23,6 +23,7 @@
             <!-- Dropdown to filter results by seed category - Code found on Materialize https://materializecss.com/select.html -->
             <form action="{{ url_for('filter') }}" method="post" class="col s12 m6">
                 <div class="input-field col s12">
+                    lab
                     <select name="category_name" id="category_name" onchange="this.form.submit()">
                         {% if category_name %}
                             <option value="" disabled selected>{{ category_name }}</option>

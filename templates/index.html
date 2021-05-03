@@ -25,7 +25,7 @@
     <h4 class="center-align profile-heading">Get Growing</h4>
     <div class="carousel carousel-slider">
     {% for seed in seeds %}
-        <a class="carousel-item" href="{{ url_for('get_seed', seed_id=seed._id) }}"><img class="carousel-images" src="{{ seed.seed_image }}"></a>
+        <a class="carousel-item" href="{{ url_for('get_seed', seed_id=seed._id) }}"><img class="carousel-images" src="{{ seed.seed_image }}" alt="hero-image"></a>
     {% endfor %}
     </div>
 </div>

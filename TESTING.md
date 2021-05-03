@@ -168,6 +168,16 @@ Search and Filter:
 - If all the fields are valid the user is redirected to their Profile page upon clicking/tapping the "Log In" button and a toast message is displayed stating that their log in was successfull.
 - If the user has not already registered the 'Register' link takes the user to the Register page.
 
+
+[Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) - Lighthouse audit summary for both desktop and mobile:
+
+**Home page**
+
+- Performance: **94-95%**
+- Accessibility: **97%**
+- Best Practices: **87%**
+- SEO: **100%**
+
 ## <a name="bugs">Bugs</a>
 
 ---
