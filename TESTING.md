@@ -77,6 +77,97 @@ On screen widths greater than 992px:
 - The newsletter sends to users email to the site owners email so that they can be added to a list recieve a weekly newsletter.
 - Each social media link opens the relevant external page in a new window.
 
+**Seed Cards**
+1. Home page and Seeds page
+    - The seed image is displayed with on overlay displaying the seed name in the center of the image appearing when the mouse is hovering over the image.
+    - If the user that uploaded the seed did not provide an image a default image appears in its place.
+    - The overlay and seed name are always visable on tablets and phones as hover effect does not work on these devices.
+    - Clicking/tapping the image will direct the user to the relevent seed view page. 
+2. Profile page
+    - The seed image is displayed, when this image is clicked/tapped the user is redirected to the seed view page for the specific seed.
+    - The seed name, plant type and who created the seed is displayed beneath the image.
+    - An edit and delete button are located at the bottom of the card.
+    - If the edit button is clicked/tapped the user is redirected to the edit seed page.
+    - If the user clicks/taps the delete button a modal appears asking if they really want to delete the seed. If cancel is clicked/tapped the modal disappears and the user remains on the seed view page. If confirm is clicked/tapped by the user the seed is deleted from the database, the user is redirected to the seeds page and a toast message appears stating that the seed was deleted successfully.
+
+**Home page**
+
+- "Find Seeds" button on hero image directs user to the Seeds page.
+- The carousel displays five seeds and automatically skips through them.
+- Clicking/tapping on a an image in the carousel directs the user to the relevent seed view page.
+- The three most recently added seeds are displayed in the "Recently added section"
+- The seed cards in the "Recently Added" section function as described in the Seed Cards testing section (see above).
+- Three cards appear in a row on tablet devices and bigger but appear one on top of another on mobile devices.
+
+**Seeds page**
+- All seeds in the database are displayed in the form of cards.
+- The seed cards function as described in the Seed Cards testing section (see above).
+
+Search and Filter:
+- If the user enters a word in the search field and hits enter or clicks/taps search all the seeds that contain word in the database will be displayed.
+- If the user picks a specific category in the dropdown filter and hits enter or clicks/taps only the seeds that are in that category are displayed.
+- Clicking/tapping the cancel icon reloads the page with no query or filter applied.
+- If no results are found a heading is displayed stating that no results were found.
+
+**Add Seed Page**
+
+- If a user is not logged in and tries to reach the Add Seed page with brute force using the url they are redirected to the log in page and a toast message appears stating that they need to be logged in to do that.
+- If the user leaves the "Seed name" or "Category" field empty they are indicated that the field must be filled out by a red line appearing under the relevant field.
+- The seed category dropdown contains the different seed categories from the MongoDB database for the user to choose from.
+- The user is instructed that they must enter each new instruction on a new line.
+- The 'Submit' button does the following:
+  - Adds the seed to the seeds collection.
+  - Redirects to the user to the seeds page, showing the new seed as the first seed.
+  - A toast message is displayed stating that the seed was successfully added.
+
+**Edit Seed Page**
+- If a user is not logged in and tries to reach the Add Seed page with brute force using the url they are redirected to the log in page and a toast message appears stating that they need to be logged in to do that.
+- If a user is logged in and tries to use brute force to edit another users seed they are redirected to the seeds page and a toast message is displayed stating that the seed does not belong to them.
+- When the edit seed page opens the input fields already contain the seeds existing values.
+- If the user leaves the "Seed name" or "Category" field empty it is indicated to them that the field must be filled out by a red line appearing under the relevant field.
+- The seed category dropdown contains the different seed categories from the MongoDB database for the user to choose from.
+- The user is instructed that they must enter each new instruction on a new line.
+- The 'Edit' button does the following:
+  - Edits the seed in the seeds collection.
+  - Redirects the user to the seeds page.
+  - A toast message is displayed stating that the seed was successfully updated.
+- The admin can edit or delete any seed.
+
+**Seed View Page**
+- If a user is logged in and they have added the seed edit and delete buttons appear at the top of the page.
+- If admin is logged in edit and delete buttons appear at the top of all seed pages.
+- If the edit button is clicked/tapped the user is redirected to the edit seed page.
+- If the user clicks/taps the delete button a modal appears asking if they really want to delete the seed. If cancel is clicked/tapped the modal disappears and the user remains on the seed view page. If confirm is clicked/tapped by the user the seed is deleted from the database, the user is redirected to the seeds page and a toast message appears stating that the seed was deleted successfully.
+- If a user is not logged in and tries to delete a seed with brute force using the url they are redirected to the log in page and a toast message appears stating that they need to be logged in to do that.
+- If a user is logged in and tries to use brute force to delete another users seed they are redirected to the seeds page and a toast message is displayed stating that the seed does not belong to them.
+- The description moves to underneath the image on mobile devices.
+- If there are no harvesting instructions for a seed in the database the "Harvesting Instructions" section of the page does not appear.
+
+**Profile Page**
+- A floating action button to add a seed is located at the page.
+- When the floating action button is clicked/tapped the user is relocated to the add seed page.
+- All seeds that the user has created appear in the form of cards
+- The seed cards function as described in the Seed Cards testing section (see above).
+- If the user has not added any seeds a message is displayed stating that they have not added any seeds and they are provided with a link to the add seed page.
+
+**Register page**
+
+- If the user is already registered the 'Log In' link takes the user to the Log In page.
+- If the user enters a username or password that does match the form validation it highlights the issue to the user by displaying a red line.
+- If the user enters correctly formatted username and password fields the form displays a green line indicating that the fields are acceptable.
+- If the user submits a username (uppercase or lowercase) that is already registered the page reloads and a toast is displayed stating that the username is taken.
+- If all the fields are valid the user is redirected to their new Profile page upon clicking/tapping the "Register" button and a toast message is displayed stating that their registration was successfull.
+- The newly registered user's username and password are added to the users collection in the database.
+- If the user is already registered the 'Log In' link takes the user to the Log In page.
+
+**Log In page**
+
+- Entering a username or password not matching the form validation highlights the issue to the user.
+- If the user enters a username or password that does match the form validation it highlights the issue to the user by displaying a red line.
+- If the user enters correctly formatted username and password fields the form displays a green line indicating that the fields are acceptable.
+- If all the fields are valid the user is redirected to their Profile page upon clicking/tapping the "Log In" button and a toast message is displayed stating that their log in was successfull.
+- If the user has not already registered the 'Register' link takes the user to the Register page.
+
 ## <a name="bugs">Bugs</a>
 
 ---
