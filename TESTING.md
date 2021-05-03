@@ -57,7 +57,6 @@ The following tests have been carried out without any issues:
 **Navigation bar**
 
 Mobile:
-- Navbar is fixed to the top of the viewport when scrolling down.
 - Tapping/clicking the logo takes users to the Home page.
 - When the hamburger menu icon is clicked/tapped all the menu options that are available to the user are displayed in the Sidenav.
 - The correct menu options appear depending on the user's session status:
@@ -75,15 +74,16 @@ On screen widths greater than 992px:
 
 - The footer remains stuck to the bottom of the page even when all content is removed.
 - The newsletter sends to users email to the site owners email so that they can be added to a list recieve a weekly newsletter.
+- A success message is displayed to the user when the sign up, and an error message is displayed when the signup failed.
 - Each social media link opens the relevant external page in a new window.
 
 **Seed Cards**
-1. Home page and Seeds page
+1. **Home page and Seeds page**
     - The seed image is displayed with on overlay displaying the seed name in the center of the image appearing when the mouse is hovering over the image.
     - If the user that uploaded the seed did not provide an image a default image appears in its place.
     - The overlay and seed name are always visable on tablets and phones as hover effect does not work on these devices.
     - Clicking/tapping the image will direct the user to the relevent seed view page. 
-2. Profile page
+2. **Profile page**
     - The seed image is displayed, when this image is clicked/tapped the user is redirected to the seed view page for the specific seed.
     - The seed name, plant type and who created the seed is displayed beneath the image.
     - An edit and delete button are located at the bottom of the card.
@@ -104,8 +104,8 @@ On screen widths greater than 992px:
 - The seed cards function as described in the Seed Cards testing section (see above).
 
 Search and Filter:
-- If the user enters a word in the search field and hits enter or clicks/taps search all the seeds that contain word in the database will be displayed.
-- If the user picks a specific category in the dropdown filter and hits enter or clicks/taps only the seeds that are in that category are displayed.
+- If the user enters a word in the search field and hits enter or clicks/taps "Search" all the seeds that contain word in the database will be displayed.
+- If the user picks a specific category in the dropdown filter the seeds that are in that category are displayed immedietly.
 - Clicking/tapping the cancel icon reloads the page with no query or filter applied.
 - If no results are found a heading is displayed stating that no results were found.
 

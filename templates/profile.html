@@ -52,7 +52,7 @@
                             <!-- Buttons -->
                             <div class="profile-buttons">
                                 <a href="{{ url_for('edit_seed', seed_id=seed._id) }}" class="btn-floating waves-effect waves-light blue"><i class="fas fa-pencil-alt"></i></a>
-                                <button>
+                                <button aria-label="delete button">
                                     <a data-target="{{ seed._id }}" class="btn-floating modal-trigger waves-effect waves-light red"><i class="fas fa-trash"></i></a>
                                 </button>
                             </div>
