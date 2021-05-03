@@ -168,15 +168,52 @@ Search and Filter:
 - If all the fields are valid the user is redirected to their Profile page upon clicking/tapping the "Log In" button and a toast message is displayed stating that their log in was successfull.
 - If the user has not already registered the 'Register' link takes the user to the Register page.
 
-
-[Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) - Lighthouse audit summary for both desktop and mobile:
+### Automated testing
+[Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) - Lighthouse was used to audit all pages:
 
 **Home page**
 
-- Performance: **94-95%**
+- Performance: **95%**
 - Accessibility: **97%**
 - Best Practices: **87%**
 - SEO: **100%**
+
+**Seeds page**
+
+- Performance: **92-98%**
+- Accessibility: **89%**
+- Best Practices: **87%**
+- SEO: **100%**
+
+**Add Seed page**
+
+- Performance: **98-99%**
+- Accessibility: **88%**
+- Best Practices: **87%**
+- SEO: **100%**
+
+**Profile page**
+
+- Performance: **99%**
+- Accessibility: **94%**
+- Best Practices: **87%**
+- SEO: **90%**
+
+**Log In page**
+
+- Performance: **97-99%**
+- Accessibility: **97%**
+- Best Practices: **87%**
+- SEO: **100%**
+
+**Register page**
+
+- Performance: **96-97%**
+- Accessibility: **97%**
+- Best Practices: **87%**
+- SEO: **100%**
+
+- Lighthouse reported a warning on each page that "Background and foreground colors do not have a sufficient contrast ratio." in regards to the navbar, however I have tested this website on people and all report that they had no trouble in reading the navbar elements so I decided to ignore this warning.
 
 ## <a name="bugs">Bugs</a>
 

@@ -4,72 +4,73 @@
 {% block nav_seeds_mob %}active{% endblock %}
 
 {% block content %}
-    <div class="site-container">
-        <!-- Heading -->
-        <h3 class="center-align">Seeds</h3>
+<div class="site-container">
+    <!-- Heading -->
+    <h3 class="center-align">Seeds</h3>
 
-        <!-- Search Bar -->
-        <div class="row card-panel search-bar">
-            <!-- Keyword search input field - Code was taken from the course content, Searching Lesson of Mini Project -->
-            <form id="search" action="{{ url_for('search') }}" method="post" class="col s12 m6">
-                <div class="row search-margin valign-wrapper center-align">
-                    <div class="input-field col s12">
-                        <i class="fas fa-search prefix"></i>
-                        <input type="text" name="query" id="query" class="validate">
-                        <label for="query">Search Seeds</label>
-                    </div>
-                </div>
-            </form>
-            <!-- Dropdown to filter results by seed category - Code found on Materialize https://materializecss.com/select.html -->
-            <form action="{{ url_for('filter') }}" method="post" class="col s12 m6">
+    <!-- Search Bar -->
+    <div class="row card-panel search-bar">
+        <!-- Keyword search input field - Code was taken from the course content, Searching Lesson of Mini Project -->
+        <form id="search" action="{{ url_for('search') }}" method="post" class="col s12 m6">
+            <div class="row search-margin valign-wrapper center-align">
                 <div class="input-field col s12">
-                    <select name="category_name" id="category_name" onchange="this.form.submit()">
-                        {% if category_name %}
-                            <option value="" disabled selected>{{ category_name }}</option>
-                        {% else %}
-                        <option value="" disabled selected>Choose a seed type</option>
-                        {% endif %}
-                            <option value="All">All</option>
-                            <option value="Herbs">Herbs</option>
-                            <option value="Fruit">Fruit</option>
-                            <option value="Vegetables">Vegetables</option>
-                            <option value="Flowers">Flowers</option>
-                            <option value="Houseplants">Houseplants</option>
-                    </select>
+                    <i class="fas fa-search prefix"></i>
+                    <input type="text" name="query" id="query" class="validate" />
+                    <label for="query">Search Seeds</label>
                 </div>
-            </form>
-            <div class="col s12 search-buttons-container">
-                <a href="{{ url_for('seeds') }}" class="red btn">Reset <i class="fas fa-undo"></i></a>
-                <button type="submit" form="search" class="btn waves-effect green darken-3 waves-light search-button" aria-label="search button">Search <i class="fas fa-check-circle"></i></button>
             </div>
+        </form>
+        <!-- Dropdown to filter results by seed category - Code found on Materialize https://materializecss.com/select.html -->
+        <form action="{{ url_for('filter') }}" method="post" class="col s12 m6">
+            <div class="input-field col s12">
+                <select name="category_name" id="category_name" onchange="this.form.submit()">
+                    {% if category_name %}
+                    <option value="" disabled selected>{{ category_name }}</option>
+                    {% else %}
+                    <option value="" disabled selected>Choose a seed type</option>
+                    {% endif %}
+                    <option value="All">All</option>
+                    <option value="Herbs">Herbs</option>
+                    <option value="Fruit">Fruit</option>
+                    <option value="Vegetables">Vegetables</option>
+                    <option value="Flowers">Flowers</option>
+                    <option value="Houseplants">Houseplants</option>
+                </select>
+            </div>
+        </form>
+        <div class="col s12 search-buttons-container">
+            <a href="{{ url_for('seeds') }}" class="red btn">Reset <i class="fas fa-undo"></i></a>
+            <button type="submit" form="search" class="btn waves-effect green darken-3 waves-light search-button" aria-label="search button">Search <i class="fas fa-check-circle"></i></button>
         </div>
+    </div>
 
-        {% if seeds|length > 0 %}
-            <div class="row">
-                <!-- Display seeds in Database -->
-                {% for seed in seeds %}
-                <div class="col s12 m4 l3 flex">
-                    <a href="{{ url_for('get_seed', seed_id=seed._id) }}">
-                    <div class="card small s4 hoverable">
-                        <!-- Image overlay showing the name of the seed -->
-                        <div class="overlay-card"><h4>{{ seed.seed_name }}</h4></div>
-                        {% if seed.seed_image == "" %}
-                        <!-- Default image to be used if no image was added by the user -->
-                            <img class="seed-image" src="/static/images/default-image.jpg" alt="Seed Image">
-                        {% else %}
-                        <!-- Image added by user -->
-                            <img class="seed-image" src="{{ seed.seed_image }}" alt="Seed Image">
-                        {% endif %}
-                    </div>
-                    </a>
+    {% if seeds|length > 0 %}
+    <div class="row">
+        <!-- Display seeds in Database -->
+        {% for seed in seeds %}
+        <div class="col s12 m4 l3 flex">
+            <a href="{{ url_for('get_seed', seed_id=seed._id) }}">
+                <div class="card small s4 hoverable">
+                    <!-- Image overlay showing the name of the seed -->
+                    <div class="overlay-card"><h4>{{ seed.seed_name }}</h4></div>
+                    {% if seed.seed_image == "" %}
+                    <!-- Default image to be used if no image was added by the user -->
+                    <img class="seed-image" src="/static/images/default-image.jpg" alt="Seed Image" />
+                    {% else %}
+                    <!-- Image added by user -->
+                    <img class="seed-image" src="{{ seed.seed_image }}" alt="Seed Image" />
+                    {% endif %}
                 </div>
-                {% endfor %}
-            </div>
-        {% else %}
-            <div class="row">
-                <h4 class="no-results">No results were found <i class="fas fa-frown"></i></h4>
-            </div>
-        {% endif %}
-    </div>    
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="row">
+        <h4 class="no-results">No results were found <i class="fas fa-frown"></i></h4>
+    </div>
+    {% endif %}
+</div>
+   
 
 {% endblock %}

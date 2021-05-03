@@ -1,131 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="Description" content="Learn how to grow your own plants." />
+        <!-- Stylesheets -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+            crossorigin="anonymous"
+            type="text/css"
+        />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css" />
+        <!-- Favicon -->
+        <link rel="icon" href="static/images/logo.png" type="image/png" />
+        <!-- Page Titles -->
+        <title>{% block title %}{% endblock %}</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="Description" content="Learn how to grow your own plants." />
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" 
-        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" type="text/css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-        type="text/css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
-    <!-- Favicon -->
-    <link rel="icon" href="static/images/logo.png" type="image/png" />
-    <!-- Page Titles -->
-    <title>{% block title %}{% endblock %}</title>
-</head>
-
-<body>
-    <header>
-        <!-- Top Navbar - Code from Code Institute mini project -->
-        <nav class="nav-extended light-green">
-            <div class="nav-wrapper">
-                <a href="{{ url_for('home') }}" class="logo">The Seed Shelf</a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
-                <ul class="right hide-on-med-and-down">
-                    <li class="{% block nav_home %}{% endblock %}"><a href="{{ url_for('home') }}">Home</a></li>
-                    <li class="{% block nav_seeds %}{% endblock %}"><a href="{{ url_for('seeds') }}">Seeds</a></li>
-                    <!-- If user is logged in show -->
-                    {% if session.user %}
+    <body>
+        <header>
+            <!-- Top Navbar - Code from Code Institute mini project -->
+            <nav class="nav-extended light-green">
+                <div class="nav-wrapper">
+                    <a href="{{ url_for('home') }}" class="logo">The Seed Shelf</a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li class="{% block nav_home %}{% endblock %}"><a href="{{ url_for('home') }}">Home</a></li>
+                        <li class="{% block nav_seeds %}{% endblock %}"><a href="{{ url_for('seeds') }}">Seeds</a></li>
+                        <!-- If user is logged in show -->
+                        {% if session.user %}
                         <li class="{% block nav_add %}{% endblock %}"><a href="{{ url_for('add_seed') }}">Add Seed</a></li>
                         <li class="{% block nav_profile %}{% endblock %}"><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                         <li class="{% block nav_logout %}{% endblock %}"><a href="{{ url_for('logout') }}">Log Out</a></li>
                         <!-- If user is not logged in show -->
-                    {% else %}
+                        {% else %}
                         <li class="{% block nav_login %}{% endblock %}"><a href="{{ url_for('login') }}">Log In</a></li>
                         <li class="{% block nav_register %}{% endblock %}"><a href="{{ url_for('register') }}">Register</a></li>
-                    {% endif %}
-                </ul>
+                        {% endif %}
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Mobile sidenav - Code from Code Institute mini project -->
+            <ul class="sidenav" id="mobile-demo">
+                <li><h4 class="center-align text-darken-4">The Seed Shelf</h4></li>
+                <li class="{% block nav_home_mob %}{% endblock %}"><a href="{{ url_for('home') }}">Home</a></li>
+                <li class="{% block nav_seeds_mob %}{% endblock %}"><a href="{{ url_for('seeds') }}">Seeds</a></li>
+                <!-- If user is logged in show -->
+                {% if session.user %}
+                <li class="{% block nav_add_mob %}{% endblock %}"><a href="{{ url_for('add_seed') }}">Add Seed</a></li>
+                <li class="{% block nav_profile_mob %}{% endblock %}"><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+                <li class="{% block nav_logout_mob %}{% endblock %}"><a href="{{ url_for('logout') }}">Log Out</a></li>
+                <!-- If user is not logged in show -->
+                {% else %}
+                <li class="{% block nav_login_mob %}{% endblock %}"><a href="{{ url_for('login') }}">Log In</a></li>
+                <li class="{% block nav_register_mob %}{% endblock %}"><a href="{{ url_for('register') }}">Register</a></li>
+                {% endif %}
+            </ul>
+        </header>
+
+        <!-- Block used for content on each template -->
+        <main>
+            {% block content %} 
+            {% endblock %}
+        </main>
+
+        <!-- Footer -->
+        <footer class="container-fluid light-green">
+            <div class="row footer">
+                <!-- Newsletter sign up -->
+                <div class="col s12 m6 footer-items">
+                    <p>Sign up for our weekly newsletter</p>
+                    <form id="contactForm" onsubmit="return sendMail(this);">
+                        <input type="email" name="email" id="emailaddress" placeholder="Email Address" class="form-control" required />
+                        <button type="submit" id="send-button"><i class="far fa-paper-plane" aria-label="send button"></i></button>
+                    </form>
+                </div>
+                <!-- Social media links -->
+                <div class="col s12 m6 social-links">
+                    <p class="footer-items">© Copyright - The Seed Shelf</p>
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook aria-hidden icon"></i> <span class="sr-only">Facebook</span></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram aria-hidden icon"></i> <span class="sr-only">Instagram</span></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter aria-hidden icon"></i> <span class="sr-only">Twitter</span></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.reddit.com" target="_blank"><i class="fab fa-reddit aria-hidden icon"></i> <span class="sr-only">Reddit</span></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </nav>
-        
-        <!-- Mobile sidenav - Code from Code Institute mini project -->
-        <ul class="sidenav" id="mobile-demo">
-            <li><h4 class="center-align text-darken-4">The Seed Shelf</h4></li>
-            <li class="{% block nav_home_mob %}{% endblock %}"><a href="{{ url_for('home') }}">Home</a></li>
-                    <li class="{% block nav_seeds_mob %}{% endblock %}"><a href="{{ url_for('seeds') }}">Seeds</a></li>
-                    <!-- If user is logged in show -->
-                    {% if session.user %}
-                        <li class="{% block nav_add_mob %}{% endblock %}"><a href="{{ url_for('add_seed') }}">Add Seed</a></li>
-                        <li class="{% block nav_profile_mob %}{% endblock %}"><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                        <li class="{% block nav_logout_mob %}{% endblock %}"><a href="{{ url_for('logout') }}">Log Out</a></li>
-                        <!-- If user is not logged in show -->
-                    {% else %}
-                        <li class="{% block nav_login_mob %}{% endblock %}"><a href="{{ url_for('login') }}">Log In</a></li>
-                        <li class="{% block nav_register_mob %}{% endblock %}"><a href="{{ url_for('register') }}">Register</a></li>
-                    {% endif %}
-        </ul>
-    </header>
+        </footer>
 
-    <!-- Block used for content on each template -->
-    <main>
-        {% block content %}
-        {% endblock %}
-    </main>
+        <!-- Scripts -->
+        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+        <!-- Emailjs -->
+        <script>
+            (function () {
+                emailjs.init("user_bb4xdCXZSX4M89EM712oR");
+            })();
+        </script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/email.js') }}"></script>
+        {% block scripts %} {% endblock %}
 
-    <!-- Footer -->
-    <footer class="container-fluid light-green">
-        <div class="row footer">
-            <!-- Newsletter sign up -->
-            <div class="col s12 m6 footer-items">
-                <p>Sign up for our weekly newsletter</p>
-                <form id="contactForm" onsubmit="return sendMail(this);">
-                    <input type="email" name="email" id="emailaddress" placeholder="Email Address" class="form-control" required />
-                    <button type="submit" id="send-button"><i class="far fa-paper-plane" aria-label="send button"></i></button>    
-                </form>
-            </div>
-            <!-- Social media links -->
-            <div class="col s12 m6 social-links">
-                <p class="footer-items">© Copyright - The Seed Shelf</p>
-                <ul class="list-inline">
-                    <li class="list-inline-item">
-                        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook aria-hidden icon"></i> <span class="sr-only">Facebook</span></a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram aria-hidden icon"></i> <span class="sr-only">Instagram</span></a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter aria-hidden icon"></i> <span class="sr-only">Twitter</span></a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="https://www.reddit.com" target="_blank"><i class="fab fa-reddit aria-hidden icon"></i> <span class="sr-only">Reddit</span></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-    <!-- Emailjs -->
-    <script>
-        (function () {
-            emailjs.init("user_bb4xdCXZSX4M89EM712oR");
-        })();
-    </script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>    
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/email.js') }}"></script>
-    {% block scripts %}
-    {% endblock %}
-
-    <!-- Inline scripts to display materialize toasts for flashed messages -->
-    <script>
-        {% with messages = get_flashed_messages() %}
-            {% if messages %}
-                {% for message in messages %}
-                // Code for toasts was found at https://materializecss.com/toasts.html
-                    M.toast({html: "{{ message }}", classes: 'rounded'})
-                {% endfor %}
-            {% endif %}
-        {% endwith %}
-    </script>
-
-</body>
-
+        <!-- Inline scripts to display materialize toasts for flashed messages -->
+        <script>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                    // Code for toasts was found at https://materializecss.com/toasts.html
+                        M.toast({html: "{{ message }}", classes: 'rounded'})
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </script>
+    </body>
 </html>
