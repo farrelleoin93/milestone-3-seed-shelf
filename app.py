@@ -220,7 +220,7 @@ def get_seed(seed_id):
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
-    seeds = list(mongo.db.seeds.find({"$text": {"$search": query}}).sort())
+    seeds = list(mongo.db.seeds.find({"$text": {"$search": query}}))
     return render_template("seeds.html", seeds=seeds)
 
 

@@ -171,10 +171,9 @@ opacity: 1;
   background-color: #f7f5f5;
 }
 
-.search-button-container {
+.search-buttons-container {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
 }
 
 .search-button {
