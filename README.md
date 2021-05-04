@@ -19,7 +19,7 @@ You can see the live website [here](https://the-seed-shelf.herokuapp.com/).
     - Fonts
     - Icons
     - Colours
-- [Database Model](#Database Model)
+- [Database Model](#database-model)
 - [Wireframes](#wireframes)
 - [Features](#features)
 - [Technologies](#technologies)
