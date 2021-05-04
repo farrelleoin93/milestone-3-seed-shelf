@@ -100,8 +100,9 @@ You can see the live website [here](https://the-seed-shelf.herokuapp.com/).
 
 ---
 
-### Original Wireframes
-The original wireframes from before I started building this website can be found at the following links:
+The wireframes for this website can be found at the following links:
+- [Home page]()
+
 
 #### Changes to Original Wireframes
 
