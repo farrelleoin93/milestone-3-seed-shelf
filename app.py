@@ -16,7 +16,9 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
+# Routes
 
+# ------- Home page
 @app.route("/")
 @app.route("/home")
 def home():
@@ -27,6 +29,7 @@ def home():
                             recents=recents)
 
 
+# ------- Seeds page
 @app.route("/seeds")
 def seeds():
     seeds = list(mongo.db.seeds.find().sort('_id', -1))
@@ -38,6 +41,7 @@ def seeds():
                             categories=categories)
 
 
+# ------- Register page
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -64,6 +68,7 @@ def register():
     return render_template("register.html")
 
 
+# ------- Log in page
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -93,6 +98,7 @@ def login():
     return render_template("login.html")
 
 
+# ------- Profile page
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     # Grab the session users username form the database
@@ -109,6 +115,7 @@ def profile(username):
     return redirect(url_for("login"))
 
 
+# ------- Log out page
 @app.route("/logout")
 def logout():
     # If user is not logged in
@@ -123,8 +130,10 @@ def logout():
         return redirect(url_for("login"))
 
 
+# ------- Add seed page
 @app.route("/seed/add", methods=["GET", "POST"])
 def add_seed():
+    # If user is not logged in
     if "user" not in session:
         flash("You need to be logged in to do that")
         return redirect(url_for("login"))
@@ -151,6 +160,7 @@ def add_seed():
     return render_template("add_seed.html", categories=categories)
 
 
+# ------- Edit seed page
 @app.route("/seed/<seed_id>/edit", methods=["GET", "POST"])
 def edit_seed(seed_id):
 
@@ -158,10 +168,13 @@ def edit_seed(seed_id):
     categories = mongo.db.categories.find().sort("category_name", 1)
     seed_owner = seed["created_by"]
 
+    # If user is not logged in
     if "user" not in session:
         flash("You need to be logged in to do that")
         return redirect(url_for("login"))
 
+    # If user is not admin or did not create
+    # the seed display message and direct to seeds page
     elif session["user"] != "admin" and session["user"] != seed_owner:
         flash("This seed does not belong to you")
 
@@ -190,15 +203,19 @@ def edit_seed(seed_id):
     return render_template("edit_seed.html", seed=seed, categories=categories)
 
 
+# ------- Delete seed page
 @app.route("/seed/<seed_id>/delete")
 def delete_seed(seed_id):
     seed = mongo.db.seeds.find_one({"_id": ObjectId(seed_id)})
     seed_owner = seed["created_by"]
 
+    # If user is not logged in
     if "user" not in session:
         flash("You need to be logged in to do that")
         return redirect(url_for("login"))
 
+    # If user is not admin or did not create
+    # the seed display message and direct to seeds page
     elif session["user"] != "admin" and session["user"] != seed_owner:
         flash("This seed does not belong to you")
 
@@ -210,6 +227,7 @@ def delete_seed(seed_id):
         return redirect(url_for("seeds"))
 
 
+# ------- View seed page
 @app.route("/seed/<seed_id>/view")
 def get_seed(seed_id):
     seed = mongo.db.seeds.find_one({"_id": ObjectId(seed_id)})
@@ -217,6 +235,7 @@ def get_seed(seed_id):
     return render_template("grow_seed.html", seed=seed)
 
 
+# ------- Search seed page
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
@@ -224,6 +243,7 @@ def search():
     return render_template("seeds.html", seeds=seeds)
 
 
+# ------- Filter seed page
 @app.route("/filter", methods=["POST"])
 def filter():
     category_name = request.form.get("category_name").capitalize()
