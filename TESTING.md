@@ -2,7 +2,7 @@
 - [User Stories](#userstories)
 - [Features](#features)
 - [Manual Testing](#manualtesting)
-- [Testing](#testing)
+- [Automated Testing](#automatedtesting)
 - [Bugs](#bugs)
 
 ### <a name="userstories">Testing User Stories</a> 
@@ -202,6 +202,7 @@ Search and Filter:
 - If all the fields are valid the user is redirected to their Profile page upon clicking/tapping the "Log In" button and a toast message is displayed stating that their log in was successfull.
 - If the user has not already registered the 'Register' link takes the user to the Register page.
 
+### <a name="automatedtesting">Automated Testing</a> 
 ### Automated testing
 [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) - Lighthouse was used to audit all pages:
 
