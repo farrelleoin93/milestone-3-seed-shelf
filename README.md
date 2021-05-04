@@ -19,6 +19,7 @@ You can see the live website [here](https://the-seed-shelf.herokuapp.com/).
     - Fonts
     - Icons
     - Colours
+- [Database Model](#Database Model)
 - [Wireframes](#wireframes)
 - [Features](#features)
 - [Technologies](#technologies)
@@ -95,6 +96,39 @@ You can see the live website [here](https://the-seed-shelf.herokuapp.com/).
 
 ### Icons
 - The icons that I used in this project were provided by [Font Awesome](https://fontawesome.com/). I decided to use icons as they offer a pleasant visual aide to the site, also users tend to know that icons usually work as buttons.
+
+## <a name="database-model">Database Model</a>
+I used MongoDB's non-relational database for this website,
+
+#### Seeds collection
+
+|**Key**|**Type**|
+|:-----|:-----|
+|seed_name|string|
+|category_name|string|
+|seed_description|string|
+|seed_image|string|
+|sowing_instructions|string|
+|growing_instructions|string|
+|harvesting_instructions|string|
+|created_by|string|
+
+#### Categories collection
+
+|**Key**|**Type**|
+|:-----|:-----|
+|_id|ObjectId|string|
+|category_name|string|
+
+
+#### Users collection
+
+|**Key**|**Type**|
+|:-----|:-----|
+|_id|ObjectId|string|
+|username|string|
+|password|string|
+
 
 ## <a name="wireframes">Wireframes</a>
 
