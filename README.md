@@ -82,11 +82,16 @@ You can see the live website [here](https://the-seed-shelf.herokuapp.com/).
 ---
 
 ### Fonts
-
+- I used [Roboto](https://fonts.google.com/specimen/Roboto) for the body of the text and after some deliberation I decided to use [Roboto Mono](https://fonts.google.com/specimen/Roboto+Mono) for all the headings and navbar items.
 
 
 ### Colours
-
+- As this is a website about growing seeds I decided to use green and white as the colours. 
+- I used Matereialize's light-green class for the navbar and footer. 
+- For most of the buttons I used Materialize's green darken-3 classes as I felt it paired well with the green of the navbar and footer. 
+- For the "Cancel" and "Reset" buttons I used Materializes red class as it is a common colour for those types of buttons and it will help the user understand what they are for.
+- The colour of the words in the navbar, footer and buttons are white.
+- The background of the website is also white.
 
 ### Icons
 - The icons that I used in this project were provided by [Font Awesome](https://fontawesome.com/). I decided to use icons as they offer a pleasant visual aide to the site, also users tend to know that icons usually work as buttons.
@@ -97,10 +102,6 @@ You can see the live website [here](https://the-seed-shelf.herokuapp.com/).
 
 ### Original Wireframes
 The original wireframes from before I started building this website can be found at the following links:
-
-
-### Actual Wireframes
-The wireframes for the actual website can be found at the following links:
 
 #### Changes to Original Wireframes
 
@@ -176,6 +177,8 @@ Features that will be added in the future are:
     - Sweetalert2 was used to display a message to the user when they signed up for the newsletter.
 20. [JSHint](https://jshint.com/)
     - JSHint was used to test the JavaScript code.
+21. [Python Tester](https://extendsclass.com/python-tester.html)
+    - Used to test python code.
 
 
 ### Resources

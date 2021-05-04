@@ -215,6 +215,14 @@ Search and Filter:
 
 - Lighthouse reported a warning on each page that "Background and foreground colors do not have a sufficient contrast ratio." in regards to the navbar, however I have tested this website on people and all report that they had no trouble in reading the navbar elements so I decided to ignore this warning.
 
+[W3C - HTML](https://validator.w3.org/) - 0 errors - **PASS**
+
+[W3C - CSS](https://jigsaw.w3.org/css-validator/) - 0 errors - **PASS**
+
+[JS Hint](https://jshint.com/) - 0 errors - **PASS**
+
+[Python Tester](https://extendsclass.com/python-tester.html) - **No syntax errors detected :)**
+
 ## <a name="bugs">Bugs</a>
 
 ---
