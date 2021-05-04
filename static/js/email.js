@@ -1,4 +1,5 @@
 // Code to email the completed form was found at https://www.emailjs.com/docs/
+// Code for the alert message was found at https://sweetalert2.github.io/
 
 function sendMail(contactForm) {
     emailjs
