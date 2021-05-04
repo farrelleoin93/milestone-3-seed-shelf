@@ -53,23 +53,33 @@
 ### <a name="features">Testing Features</a> 
 1. "an attractive design."
    - I feel that this is achieved by the colour scheme, fonts and images.
+   ![Attractive design](https://github.com/farrelleoin93/milestone-3-seed-shelf/blob/master/static/features/navbar.PNG)
 
 2. "a navigation bar that the user understands how to use even on their first visit to the website and that brings them to the appropriate part of the website."
    - The navigation bar of the webite is clear, descriptive and functional.
+   ![Navbar](https://github.com/farrelleoin93/milestone-3-seed-shelf/blob/master/static/features/navbar.PNG)
 
 3. "a carousel that shows the user images of some of the seeds that they could learn to grow, these images also act as links to the page on how to grow the seed."
+   ![Carousel](https://github.com/farrelleoin93/milestone-3-seed-shelf/blob/master/static/features/carousel.PNG)
 
 4. "a "Recently Added" section that displays the last three seeds that have been added."
+   ![Recently added](https://github.com/farrelleoin93/milestone-3-seed-shelf/blob/master/static/features/recently-added.PNG)
 
 5. "pages that provide users with the information on how to grow plants, fruit, vegatables and herbs."
+   ![Grow plant](https://github.com/farrelleoin93/milestone-3-seed-shelf/blob/master/static/features/grow-plant.PNG)
 
 6. "an add seed page so that users can add their own information on how to grow a seed."
+   ![Add seed](https://github.com/farrelleoin93/milestone-3-seed-shelf/blob/master/static/features/add-seed.PNG)
 
 7. "a profile page that allows users to edit or delete the seeds that they have added."
+   ![Profile page](https://github.com/farrelleoin93/milestone-3-seed-shelf/blob/master/static/features/profile.PNG)
 
 8. "registration, log in and log out pages."
+   ![Log in page](https://github.com/farrelleoin93/milestone-3-seed-shelf/blob/master/static/features/loh-in.PNG)
+   ![Register page](https://github.com/farrelleoin93/milestone-3-seed-shelf/blob/master/static/features/register.PNG)
 
 9. "links to social network platforms and a way to sign up for a newsletter."
+   ![Footer](https://github.com/farrelleoin93/milestone-3-seed-shelf/blob/master/static/features/footer.PNG)
 
 ### Manual testing
 
