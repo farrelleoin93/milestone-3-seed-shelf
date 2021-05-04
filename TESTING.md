@@ -81,11 +81,8 @@
 9. "links to social network platforms and a way to sign up for a newsletter."
    ![Footer](https://github.com/farrelleoin93/milestone-3-seed-shelf/blob/master/static/features/footer.PNG)
 
-### Manual testing
 
 ### <a name="manualtesting">Manual Testing</a> 
-### Manual testing
-
 The following tests have been carried out without any issues:
 
 **Navigation bar**
@@ -203,7 +200,6 @@ Search and Filter:
 - If the user has not already registered the 'Register' link takes the user to the Register page.
 
 ### <a name="automatedtesting">Automated Testing</a> 
-### Automated testing
 [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) - Lighthouse was used to audit all pages:
 
 **Home page**
