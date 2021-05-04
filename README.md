@@ -2,7 +2,7 @@
 
 You can see the live website [here](https://the-seed-shelf.herokuapp.com/).
 
-![Responsiveness](https://github.com/farrelleoin93/milestone-3-seed-shelf/blob/master/static/images/responsive.png)
+![Responsiveness](https://github.com/farrelleoin93/milestone-3-seed-shelf/blob/master/static/images/responsive.PNG)
 
 **To open any links in this document in a new tab press `CTRL + Click`.**
 
