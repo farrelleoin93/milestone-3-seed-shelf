@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Roboto:wght@100;300;400;500;700&display=swap"); 
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Roboto:wght@100;300;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400&display=swap");
 
 /* --------------- General --------------- */
@@ -11,32 +11,35 @@ body {
     overflow-x: hidden;
 }
 
-h1,h2,h3,h4 {
-  font-family: "Roboto Mono", sans-serif;
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Roboto Mono", sans-serif;
 }
 
 hr {
-  border-top: solid;
+    border-top: solid;
     color: black;
 }
 
 main {
-  flex: 1 0 auto;
+    flex: 1 0 auto;
 }
 
 .site-container {
-  max-width: 90%;
-  margin: auto;
+    max-width: 90%;
+    margin: auto;
 }
 
 p {
-  font-size: 18px;
-  margin: 0;
+    font-size: 18px;
+    margin: 0;
 }
 
 .flex {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .text-shadow {
@@ -44,102 +47,102 @@ p {
 }
 
 .modal p {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 /* --------------- Navbar --------------- */
 
 .logo {
-  position: absolute;
-  color: #fff;
-  display: inline-block;
-  font-size: 2.1rem;
-  padding-left: 20px;
+    position: absolute;
+    color: #fff;
+    display: inline-block;
+    font-size: 2.1rem;
+    padding-left: 20px;
 }
 
 header {
-  font-family: "Roboto Mono", sans-serif;
+    font-family: "Roboto Mono", sans-serif;
 }
 
 nav ul a {
-  font-size: 17px;
+    font-size: 17px;
 }
 
 /* --------------- Cards --------------- */
 .overlay-card {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0,0,0,0.5);
-  color: #f1f1f1;
-  transition: 0.6s ease-in-out;
-  opacity: 0;
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    transition: 0.6s ease-in-out;
+    opacity: 0;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .overlay-card h4 {
-  text-align: center;
+    text-align: center;
 }
 
 /* --------------- Images --------------- */
 .hero-image {
-  height: 80vh;
-  width: 100%;
-  color: white;
-  background-image: url(../images/hero2.jpg);
-  position: relative;
-  background-position: center;
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    height: 80vh;
+    width: 100%;
+    color: white;
+    background-image: url(../images/hero2.jpg);
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .image-container {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .image-container img {
- object-fit: cover;
- width: 300px;
- height: 300px;
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
 }
 
 .carousel-images {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
 }
 
 .seed-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .grow-seed img {
-  width: 350px;
-  height: 350px;
-  object-fit: cover;
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
 }
 
 .profile-seed-image {
-  height: 300px;
-  object-fit: cover;
+    height: 300px;
+    object-fit: cover;
 }
 
 .col:hover .overlay-card {
-opacity: 1;
+    opacity: 1;
 }
 
 .error-image {
-  width: 100%;
-  margin-top: 30px;
+    width: 100%;
+    margin-top: 30px;
 }
 
 /* --------------- index.html --------------- */
@@ -148,52 +151,52 @@ opacity: 1;
     position: absolute;
     height: 100%;
     width: 100%;
-	  background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .overlay-hero a {
-  margin-top: 10px;
-  border-radius: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
 }
 
 .hero-content {
-  margin-left: 15vw;
-  margin-top: 10vh;
+    margin-left: 15vw;
+    margin-top: 10vh;
 }
 
 .profile-heading {
-  margin-top: 30px;
+    margin-top: 30px;
 }
 
 /* --------------- seeds.html --------------- */
 .search-bar {
-  border-radius: 70px;
-  background-color: #f7f5f5;
+    border-radius: 70px;
+    background-color: #f7f5f5;
 }
 
 .search-buttons-container {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .search-button {
-  margin-left: 5px;
+    margin-left: 5px;
 }
 
 .search-margin {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .no-results {
-  text-align: center;
+    text-align: center;
 }
 
 /* --------------- grow_seed.html --------------- */
-.edit-buttons{
-  margin-top: 33px;
-  margin-bottom: 0;
-  display: flex;
-  justify-content: center;
+.edit-buttons {
+    margin-top: 33px;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
 }
 
 .edit-buttons button {
@@ -202,8 +205,8 @@ opacity: 1;
 }
 
 .grow-seed {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .choice {
@@ -222,38 +225,38 @@ opacity: 1;
 }
 
 .instructions li {
-  font-size: 16px;
-  line-height: 30px;
+    font-size: 16px;
+    line-height: 30px;
 }
 
 /* --------------- Profile --------------- */
 .profile-heading {
-  height: auto;
-  display: flex;
-  justify-content: center;
+    height: auto;
+    display: flex;
+    justify-content: center;
 }
 
 .profile-heading p {
-  font-size: 22px;
-  width: 70%;
-  margin: 30px 0;
+    font-size: 22px;
+    width: 70%;
+    margin: 30px 0;
 }
 
 .profile-card {
-  padding: 6px;
+    padding: 6px;
 }
 
 .profile h2 {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 .profile-buttons {
-  padding: 0 0 10px 10px;
+    padding: 0 0 10px 10px;
 }
 
 .profile-buttons button {
-  border: none;
-  background-color: #fff;
+    border: none;
+    background-color: #fff;
 }
 
 /* --------------- Footer --------------- */
@@ -264,113 +267,112 @@ footer {
 }
 
 .footer {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
-  
+
 .footer-items {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  }
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
 
 .footer-items i {
-  font-size: 25px;
+    font-size: 25px;
 }
 
 .footer-items form {
-  display: flex;
-  width: 60%;
-  background-color: #fff;
-  border-radius: 20px;
-  padding: 0 20px;
-  margin-bottom: 10px;
+    display: flex;
+    width: 60%;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 0 20px;
+    margin-bottom: 10px;
 }
 
 .footer-items button {
-  border: none;
-  background-color: #fff;
-  border-radius: 20px;
-  padding-left: 20px;
-  cursor: pointer;
+    border: none;
+    background-color: #fff;
+    border-radius: 20px;
+    padding-left: 20px;
+    cursor: pointer;
 }
-  
-  footer .row {
+
+footer .row {
     margin-left: 15px;
     margin-right: 15px;
-  }
-  
-  .icon {
+}
+
+.icon {
     color: #fff;
     font-size: 20px;
-  }
-  
-  .social-links {
+}
+
+.social-links {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  footer li {
-      margin-top: 10px;
-      margin-bottom: 10px;
-  }
-  
-  footer a {
+}
+
+footer li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+footer a {
     color: #fff;
     margin: 10px;
     text-align: center;
-  }
-  
-  footer p {
+}
+
+footer p {
     margin-top: 10px;
     margin-bottom: 7px;
     color: #fff;
-  }
-  
-  ul.list-inline {
+}
+
+ul.list-inline {
     margin: 0;
     display: flex;
-  }
+}
 
 /* --------------- Media Queries --------------- */
 /* -------- for devices smaller than desktop and iPad pro --------- */
 @media screen and (max-width: 1200px) {
-  .container {
-    width: 90%;
-  }
+    .container {
+        width: 90%;
+    }
 
-  .overlay-card {
-    opacity: 1;
-  }
+    .overlay-card {
+        opacity: 1;
+    }
 
-  .fixed-action-btn {
-    margin-bottom: 100px;
-  }
+    .fixed-action-btn {
+        margin-bottom: 100px;
+    }
 
-  .footer-items form {
-    width: 80%;
-  }
+    .footer-items form {
+        width: 80%;
+    }
 }
 
 @media screen and (max-width: 1000px) {
-  .edit-buttons {
-    margin-top: 0;
-  }
-
+    .edit-buttons {
+        margin-top: 0;
+    }
 }
 
 @media only screen and (max-width: 600px) {
-  .hero-content {
-    margin-left: 10vw;
-    margin-top: 10vh;
-    margin-right: 10vw;
-  }
+    .hero-content {
+        margin-left: 10vw;
+        margin-top: 10vh;
+        margin-right: 10vw;
+    }
 
-  .fixed-action-btn {
-    margin-bottom: 0;
-  }
+    .fixed-action-btn {
+        margin-bottom: 0;
+    }
 
-  .seed-description {
-    margin-top: 20px;
-  }
+    .seed-description {
+        margin-top: 20px;
+    }
 }
