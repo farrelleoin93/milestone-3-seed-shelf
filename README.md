@@ -134,7 +134,7 @@ The wireframes for this website can be found at the following links:
 - an add seed page so that users can add their own information on how to grow a seed.
 - a profile page that allows users to edit or delete the seeds that they have added.
 - registration, log in and log out pages.
-- links to social network platforms.
+- links to social network platforms and a way to sign up for a newsletter.
 
 **Features that will be added in the future are:**
 - an option to add videos of how to grow seeds.

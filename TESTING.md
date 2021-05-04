@@ -1,11 +1,11 @@
 ## Index
 - [User Stories](#userstories)
 - [Features](#features)
-- [Technologies](#technologies)
+- [Manual Testing](#manualtesting)
 - [Testing](#testing)
 - [Bugs](#bugs)
 
-### <a name="#userstories">Testing User Stories</a> 
+### <a name="userstories">Testing User Stories</a> 
 ### All Users
 1. "As a user I want to be able to understand what the site is for immedietly from the home page."
    - The home page has a large hero image of potting equipment and also a short couple of lines that briefly explains what the website does.
@@ -50,6 +50,30 @@
 5. "As the owner I want to be able to delete the content that users have added."
    - The "admin" has the ablity to delete any seed that they wish. This ability is reserved for the admin and the creater of the seed only.
 
+### <a name="features">Testing Features</a> 
+1. "an attractive design."
+   - I feel that this is achieved by the colour scheme, fonts and images.
+
+2. "a navigation bar that the user understands how to use even on their first visit to the website and that brings them to the appropriate part of the website."
+   - The navigation bar of the webite is clear, descriptive and functional.
+
+3. "a carousel that shows the user images of some of the seeds that they could learn to grow, these images also act as links to the page on how to grow the seed."
+
+4. "a "Recently Added" section that displays the last three seeds that have been added."
+
+5. "pages that provide users with the information on how to grow plants, fruit, vegatables and herbs."
+
+6. "an add seed page so that users can add their own information on how to grow a seed."
+
+7. "a profile page that allows users to edit or delete the seeds that they have added."
+
+8. "registration, log in and log out pages."
+
+9. "links to social network platforms and a way to sign up for a newsletter."
+
+### Manual testing
+
+### <a name="manualtesting">Manual Testing</a> 
 ### Manual testing
 
 The following tests have been carried out without any issues:
