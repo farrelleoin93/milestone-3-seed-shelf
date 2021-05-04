@@ -101,11 +101,26 @@ You can see the live website [here](https://the-seed-shelf.herokuapp.com/).
 ---
 
 The wireframes for this website can be found at the following links:
-- [Home page]()
+- [Home page](https://github.com/farrelleoin93/milestone-3-seed-shelf/blob/master/static/wireframes/home.png)
+- [Seeds page](https://github.com/farrelleoin93/milestone-3-seed-shelf/blob/master/static/wireframes/seeds.png)
+- [Add seed page](https://github.com/farrelleoin93/milestone-3-seed-shelf/blob/master/static/wireframes/add-seed.png)
+- [Edit seed page](https://github.com/farrelleoin93/milestone-3-seed-shelf/blob/master/static/wireframes/edit-seed.png)
+- [Seed view page](https://github.com/farrelleoin93/milestone-3-seed-shelf/blob/master/static/wireframes/how-to-grow.png)
+- [Log in page](https://github.com/farrelleoin93/milestone-3-seed-shelf/blob/master/static/wireframes/log-in.png)
+- [Register page](https://github.com/farrelleoin93/milestone-3-seed-shelf/blob/master/static/wireframes/register.png)
+- [Profile page](https://github.com/farrelleoin93/milestone-3-seed-shelf/blob/master/static/wireframes/profile.png)
 
 
-#### Changes to Original Wireframes
-
+#### Changes to Wireframes
+- Footer
+     - I added the newsletter sign up section and positioned it on the left side of the footer and moved the copyright and social links to the right side.
+     - The newsletter sign up is placed above the copyright and social links on mobile devices.
+- View seed page
+     - I moved the image to the left hand side of the screen and placed the seed description on the right.
+- Profile
+     - Only three cards are displayed in each row in desktop and tablet mode instead of four.
+     - I added information about the seed and edit and delete buttons underneath the image in the seed card.
+     - I also added a floating action button to the bottom right of the screen.
 
 ## <a name="features">Features</a>
 
@@ -119,7 +134,6 @@ The main features of this website are:
 - an add seed page so that users can add their own information on how to grow a seed.
 - a profile page that allows users to edit or delete the seeds that they have added.
 - registration, log in and log out pages.
-- a working contact us form so that the users can ask questions and give feedback about the website.
 - links to social network platforms.
 
 Features that will be added in the future are:
