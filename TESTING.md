@@ -3,6 +3,7 @@
 - [Features](#features)
 - [Manual Testing](#manualtesting)
 - [Automated Testing](#automatedtesting)
+- [Responsiveness Testing](#responsiveness)
 - [Bugs](#bugs)
 
 ### <a name="userstories">Testing User Stories</a> 
@@ -253,6 +254,36 @@ Search and Filter:
 [JS Hint](https://jshint.com/) - 0 errors - **PASS**
 
 [Python Tester](https://extendsclass.com/python-tester.html) - **No syntax errors detected :)**
+
+### <a name="responsiveness">Responsiveness Testing</a> 
+### Browsers
+
+Tested on:
+
+- Chrome
+- Edge
+- Firefox
+- Safari (iOS)
+
+### Screen sizes
+The following devices were tested using Chrome DevTools:
+
+- Moto G4
+- Galaxy S5
+- Pixel 2
+- Pixel 2 XL
+- iPhone 5 SE
+- iPhone 6/7/8
+- iPhone 6/7/8 Plus
+- iPhone X
+- iPad
+- iPad Pro
+
+Also physically tested on:
+- Mobile
+- Tablet
+- Laptop
+- Large Desktop
 
 ## <a name="bugs">Bugs</a>
 
