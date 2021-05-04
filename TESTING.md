@@ -303,3 +303,20 @@ Also physically tested on:
     - To fix this bug I removed the seeds=seeds that I was passing into the filter url_for as the filter view did not take a parameter. I was helped with this issue by Michael, one of the Code Institute's tutors.
 7. **When all option in dropdown select on the seeds page was picked I got the error: "object of type 'Cursor' has no len() convert it to list"**
     - This issue was fixed by adding the list() constructor to "All" in the filter function. I recieved help on how to rectify this issue by browsing through slack and reading about how other people solved similar issues.
+
+### Unresolved
+
+**Warnings reported by GitPod**
+
+```
+Special characters must be escaped : [ > ].
+```
+
+```
+Doctype must be declared first.
+```
+
+```
+continuation line over-indented for visual indent
+```
+All of these issues are common and were purposefully ignored as they do not impact the website.
