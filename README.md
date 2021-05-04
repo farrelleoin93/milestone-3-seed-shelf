@@ -55,7 +55,7 @@ You can see the live website [here](https://the-seed-shelf.herokuapp.com/).
 
 ### <a name="goals">Site Owner Goals</a>
 
-1. As the owner I want to inspire people to grow there own plants and discover the joys of gardening.
+1. As the owner I want to inspire people to grow their own plants and discover the joys of gardening.
 2. As the owner I want to provide people with a visually appealing website.
 3. As the owner I want to provide people with clear instructions on how to grow different types of plants.
 4. As the owner I want to increase the volume of people that visit this website over time.
@@ -69,7 +69,7 @@ You can see the live website [here](https://the-seed-shelf.herokuapp.com/).
 - The user should be presented with a visually appealing website.
 - The user should be able to clearly navigate through the website even on their first visit.
 - The user should be able to learn how to grow seeds.
-- The user should be search for a specific seed or filter the seeds by a category.
+- The user should be able search for a specific seed or filter the seeds by a category.
 - The user should be able to register for the website.
 - The user should be able to add, edit and delete their own seeds. 
 - The user should be able to view any seeds that they have added on their own profile page.
@@ -82,14 +82,14 @@ You can see the live website [here](https://the-seed-shelf.herokuapp.com/).
 ---
 
 ### Fonts
-- I used [Roboto](https://fonts.google.com/specimen/Roboto) for the body of the text and after some deliberation I decided to use [Roboto Mono](https://fonts.google.com/specimen/Roboto+Mono) for all the headings and navbar items.
+- I used [Roboto](https://fonts.google.com/specimen/Roboto) for the body and after some deliberation and feeedback from some friends that tested the website I decided to use [Roboto Mono](https://fonts.google.com/specimen/Roboto+Mono) for all the headings and navbar items.
 
 
 ### Colours
 - As this is a website about growing seeds I decided to use green and white as the colours. 
-- I used Matereialize's light-green class for the navbar and footer. 
-- For most of the buttons I used Materialize's green darken-3 classes as I felt it paired well with the green of the navbar and footer. 
-- For the "Cancel" and "Reset" buttons I used Materializes red class as it is a common colour for those types of buttons and it will help the user understand what they are for.
+- I used Matereialize's "light-green" class for the navbar and footer. 
+- For most of the buttons I used Materialize's "green" and "darken-3" classes as I felt it paired well with the green of the navbar and footer. 
+- For the "Cancel" and "Reset" buttons I used Materializes "red" class as it is a common colour for those types of buttons and it will help the user understand what they are for.
 - The colour of the words in the navbar, footer and buttons are white.
 - The background of the website is also white.
 
@@ -112,12 +112,12 @@ The wireframes for this website can be found at the following links:
 
 
 #### Changes to Wireframes
-- Footer
+- Footer:
      - I added the newsletter sign up section and positioned it on the left side of the footer and moved the copyright and social links to the right side.
      - The newsletter sign up is placed above the copyright and social links on mobile devices.
-- View seed page
+- View seed page:
      - I moved the image to the left hand side of the screen and placed the seed description on the right.
-- Profile
+- Profile Page:
      - Only three cards are displayed in each row in desktop and tablet mode instead of four.
      - I added information about the seed and edit and delete buttons underneath the image in the seed card.
      - I also added a floating action button to the bottom right of the screen.
@@ -125,7 +125,7 @@ The wireframes for this website can be found at the following links:
 ## <a name="features">Features</a>
 
 ---
-The main features of this website are:
+**The main features of this website are:**
 - an attractive design.
 - a navigation bar that the user understands how to use even on their first visit to the website and that brings them to the appropriate part of the website.
 - a carousel that shows the user images of some of the seeds that they could learn to grow, these images also act as links to the page on how to grow the seed.
@@ -136,8 +136,8 @@ The main features of this website are:
 - registration, log in and log out pages.
 - links to social network platforms.
 
-Features that will be added in the future are:
-- an option to add videos of seeds growing.
+**Features that will be added in the future are:**
+- an option to add videos of how to grow seeds.
 - a comment section so people can provide some extra tips on how to grow seeds.
 
 ## <a name="technologies">Technologies</a>
@@ -154,32 +154,32 @@ Features that will be added in the future are:
 ### Other
 
 1. [Tiny PNG](https://tinypng.com/)
-   - This was used to compress the size of every image used on in this project.
+   - This was used to compress the size of the hero image and the default card image.
 2. [Font Awesome](https://fontawesome.com/)
    - The icons used were found at Font Awesome.
 3. [Ucraft](https://www.ucraft.com/free-logo-maker)
    - Ucraft was used to make the logo for the favicon.
 4. [Materialize](https://materializecss.com/)
    - Materialize was used throughout this website, in 
-   particular for the navbar, form, styling and for the responsiveness.
+   particular for the navbar, form, modal, styling and for the responsiveness.
 5. [jQuery](https://jquery.com/)
-   - jQuery was used through this website for interactive features.
+   - jQuery was used for initializing the Materialize features.
 6. [Flask](https://flask.palletsprojects.com/en/1.1.x/)
-   - Flask was used throughout this website.
+   - Flask was used throughout the building of this website.
 7. [Google Fonts](https://fonts.google.com/)
-   - The fonts used for this websites were found at Google Fonts.
+   - The fonts used for this website were found at Google Fonts.
 8. [Balsamiq](https://balsamiq.com/)
    - The wireframes were made using Balsamiq.
 9. [Github](https://github.com/)
    - This project was stored on Github.
 10. [Gitpod](https://www.gitpod.io/)
-   - Gitpod was used to write the code used for this website.
+    - Gitpod was used to write the code used for this website.
 11. [Git](https://en.wikipedia.org/wiki/Git)
     - The version control system used for this project was Git.
 12. [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools)
-    - Chrome DevTools was used to test out code before adding it to this website.
+    - Chrome DevTools was used throughout the building of this website.
 13. [WebFormatter](https://webformatter.com/html) 
-    - WebFormatter was used to format the html code.
+    - WebFormatter was used to format the html and css files.
 14. [Am I Responsive](http://ami.responsivedesign.is/) 
     - Am I Responsive was used to see how the website looked on different devices.
 16. [Unsplash](https://unsplash.com/)
@@ -187,13 +187,15 @@ Features that will be added in the future are:
 17. [Pexels](https://www.pexels.com/)
     - Pexels was used to get images to use for the website.
 18. [Emailjs](https://www.emailjs.com/)
-    - Emailjs was used to send the information added into the form to the owner of the website.
+    - Emailjs was used so that the user can sign up for the newsletter.
 19. [Sweetalert2](https://sweetalert2.github.io/)
-    - Sweetalert2 was used to display a message to the user when they signed up for the newsletter.
+    - Sweetalert2 was used to display a message to the user when they sign up for the newsletter.
 20. [JSHint](https://jshint.com/)
     - JSHint was used to test the JavaScript code.
 21. [Python Tester](https://extendsclass.com/python-tester.html)
     - Used to test python code.
+22. [Heroku](https://id.heroku.com/login)
+    - Heroku was used to deploy this website
 
 
 ### Resources
@@ -209,7 +211,7 @@ The following websites were used as learning resources throughout the building o
 ## <a name="testing">Testing</a>
 
 ---
-The details of testing can be found [here](TESTING.md)
+The details of testing can be found [here](TESTING.md).
 
 ## <a name="deployment">Deployment</a>
 
@@ -299,16 +301,21 @@ echo web: python app.py > Procfile
 
 1. The code for the carousel is from Materialize and can be found [here](https://materializecss.com/carousel.html).
 2. The code for the autoplay function for the carousel was found on [here](https://www.youtube.com/watch?v=I-roimeoeXM).
-3.  
+3. The code for the alerts shown to the user after signing up for the newletter was found on [sweetalert2](https://sweetalert2.github.io/).
+4. Code was used from [Materialize](https://materializecss.com/) throughout this site, in particular for some buttons, colours, forms, reponsiveness and the modal.
+5. Code was also used and modified from the [Code Institute's](https://codeinstitute.net/) mini project.
 
 ### Content
 
-- basil - https://www.healthline.com/nutrition/basil
+- The content for how to grow the seeds was found on [GIY.ie](https://giy.ie/veg-directory/) and [The Old Farmers Almanac](https://www.almanac.com/gardening/growing-guides#Fruit#Vegetable).
 ## <a name="acknowledgements">Acknowledgements</a>
 
 - I would like to thank mentor Akshat Garg for all his invaluable advice during my three mentor sessions.
 - I would also like to thank the turors at Code Institute, in particular Tim, Michael and Fatima 
 for their help during this project.
+- I would like to thank Ed B_lead for was webinar on preparing for the Milestone 3 project.
+- I would also like to thank thank Megan Lee, Kate Farrell, and Claire Shortall for testing my project and providing me with some feedback.
+
 
 ## <a name="contact">Contact</a>
 If you have any questions regarding this project feel free to contact me at farrelleoin93@gmail.com.
